@@ -19,25 +19,23 @@ const ways = [
     title: "Call",
     icon: Call02Icon,
     color: "text-chart-1",
-    lines: [],
-    link: { label: "(989) 778-7899", href: "tel:+19897787899" },
+    lines: ["(989) 778-7899"],
+    href: "tel:+19897787899",
   },
   {
     title: "Email",
     icon: Mail01Icon,
     color: "text-chart-3",
-    lines: [],
-    link: {
-      label: "heartofthecity989@gmail.com",
-      href: "mailto:heartofthecity989@gmail.com",
-    },
+    lines: ["heartofthecity989@gmail.com"],
+    href: "mailto:heartofthecity989@gmail.com",
   },
   {
     title: "Visit",
     icon: LocationFavourite01Icon,
     color: "text-chart-2",
     lines: ["804 S. Hamilton Street", "Saginaw, MI 48602"],
-    link: { label: "Get directions", href: directionsUrl, isExternal: true },
+    href: directionsUrl,
+    isExternal: true,
   },
   {
     title: "Mail",
@@ -47,74 +45,87 @@ const ways = [
   },
 ];
 
+/* Tiles echo the topic chips; the tappable ones turn into white stickers on hover. */
+const tileStyle = "relative flex gap-3 border-2 border-foreground/25 p-3.5 sm:p-4";
+const tappableStyle =
+  "transition-[transform,background-color,color,border-color] duration-200 ease-out hover:-rotate-1 hover:border-white hover:bg-white hover:text-primary-foreground focus-visible:-rotate-1 focus-visible:border-white focus-visible:bg-white focus-visible:text-primary-foreground focus-visible:outline-none";
+
+function WayContent({ way }: { way: (typeof ways)[number] }) {
+  return (
+    <>
+      <HugeiconsIcon
+        icon={way.icon}
+        strokeWidth={1.75}
+        aria-hidden="true"
+        className={cn("size-7 shrink-0", way.color)}
+      />
+      <span className="min-w-0 text-base leading-snug">
+        <span className="block text-lg font-bold">{way.title}</span>
+        {way.lines.map((line) => (
+          <span key={line} className="block [overflow-wrap:anywhere]">
+            {line}
+          </span>
+        ))}
+      </span>
+      {way.isExternal && (
+        <HugeiconsIcon
+          icon={ArrowUpRight01Icon}
+          aria-hidden="true"
+          className="absolute top-3 right-3 size-4 opacity-70"
+        />
+      )}
+    </>
+  );
+}
+
 export function ContactWays() {
   return (
     <div>
-      <h2 className="text-3xl leading-tight font-extrabold tracking-[-0.02em]">
-        Reach us directly
-      </h2>
-      <ul className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-1">
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <h2 className="text-3xl leading-none font-extrabold tracking-[-0.03em] sm:text-4xl">
+          Reach us directly
+        </h2>
+        <div className="flex shrink-0 gap-2">
+          <a
+            href="https://www.facebook.com/heartofthecitydevelopmentcenter"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Heart of the City on Facebook"
+            className={buttonVariants({ variant: "secondary", size: "icon-lg" })}
+          >
+            <HugeiconsIcon icon={Facebook01Icon} className="size-5" aria-hidden="true" />
+          </a>
+          <a
+            href="https://www.instagram.com/heartofthecity989/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Heart of the City on Instagram"
+            className={buttonVariants({ variant: "secondary", size: "icon-lg" })}
+          >
+            <HugeiconsIcon icon={InstagramIcon} className="size-5" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+      <ul className="mt-6 grid gap-2.5 sm:grid-cols-2 sm:gap-3 lg:grid-cols-1">
         {ways.map((way) => (
-          <li key={way.title} className="flex gap-4">
-            <HugeiconsIcon
-              icon={way.icon}
-              strokeWidth={1.5}
-              aria-hidden="true"
-              className={cn("size-10 shrink-0", way.color)}
-            />
-            <div className="text-lg leading-snug">
-              <h3 className="text-xl font-bold">{way.title}</h3>
-              {way.lines.length > 0 && (
-                <address className="mt-1 not-italic">
-                  {way.lines.map((line) => (
-                    <span key={line} className="block">
-                      {line}
-                    </span>
-                  ))}
-                </address>
-              )}
-              {way.link && (
-                <a
-                  href={way.link.href}
-                  target={way.link.isExternal ? "_blank" : undefined}
-                  rel={way.link.isExternal ? "noreferrer" : undefined}
-                  className="mt-1 inline-flex min-h-11 items-center gap-1.5 font-medium break-all text-primary underline underline-offset-4 hover:no-underline"
-                >
-                  {way.link.label}
-                  {way.link.isExternal && (
-                    <HugeiconsIcon
-                      icon={ArrowUpRight01Icon}
-                      className="size-4"
-                      aria-hidden="true"
-                    />
-                  )}
-                </a>
-              )}
-            </div>
+          <li key={way.title}>
+            {way.href ? (
+              <a
+                href={way.href}
+                target={way.isExternal ? "_blank" : undefined}
+                rel={way.isExternal ? "noreferrer" : undefined}
+                className={cn(tileStyle, tappableStyle)}
+              >
+                <WayContent way={way} />
+              </a>
+            ) : (
+              <address className={cn(tileStyle, "not-italic")}>
+                <WayContent way={way} />
+              </address>
+            )}
           </li>
         ))}
       </ul>
-
-      <div className="mt-10 flex gap-3">
-        <a
-          href="https://www.facebook.com/heartofthecitydevelopmentcenter"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Heart of the City on Facebook"
-          className={buttonVariants({ variant: "secondary", size: "icon-lg" })}
-        >
-          <HugeiconsIcon icon={Facebook01Icon} className="size-5" aria-hidden="true" />
-        </a>
-        <a
-          href="https://www.instagram.com/heartofthecity989/"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Heart of the City on Instagram"
-          className={buttonVariants({ variant: "secondary", size: "icon-lg" })}
-        >
-          <HugeiconsIcon icon={InstagramIcon} className="size-5" aria-hidden="true" />
-        </a>
-      </div>
     </div>
   );
 }

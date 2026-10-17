@@ -1,6 +1,6 @@
 "use server";
 
-type ContactField = "firstName" | "lastName" | "email" | "message";
+type ContactField = "topic" | "firstName" | "lastName" | "email" | "message";
 
 export type ContactState = {
   status: "idle" | "invalid" | "unavailable";
@@ -16,6 +16,7 @@ export async function sendContactMessage(
   formData: FormData,
 ): Promise<ContactState> {
   const values = {
+    topic: String(formData.get("topic") ?? ""),
     firstName: String(formData.get("firstName") ?? "").trim(),
     lastName: String(formData.get("lastName") ?? "").trim(),
     email: String(formData.get("email") ?? "").trim(),
@@ -23,6 +24,7 @@ export async function sendContactMessage(
   };
 
   const errors: ContactState["errors"] = {};
+  if (!values.topic) errors.topic = "Choose what you're reaching out about.";
   if (!values.firstName) errors.firstName = "Enter your first name.";
   if (!values.lastName) errors.lastName = "Enter your last name.";
   if (!emailPattern.test(values.email)) {

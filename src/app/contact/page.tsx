@@ -27,7 +27,7 @@ export default function ContactPage() {
           />
           <div className="hero-scrim absolute inset-0" />
         </div>
-        <div className="site-container relative -mt-16 pb-16 sm:-mt-24 lg:mt-0 lg:pt-44 lg:pb-44">
+        <div className="site-container relative -mt-16 pb-16 sm:-mt-24 lg:mt-0 lg:pt-44 lg:pb-28">
           <h1
             id="contact-title"
             className="display-type text-[4.5rem] sm:text-[7rem] xl:text-[9rem]"
@@ -41,32 +41,30 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <div className="site-container grid gap-14 py-16 lg:grid-cols-12 lg:gap-x-8 lg:pt-0 lg:pb-28">
-        <div className="lg:col-span-4 lg:row-start-1 lg:pt-16">
-          <ContactWays />
-        </div>
-
-        <section
-          aria-labelledby="message-title"
-          className="relative bg-secondary p-6 pt-10 shadow-[0_18px_40px_-16px_color-mix(in_oklch,var(--foreground)_45%,transparent)] sm:p-10 sm:pt-12 lg:col-span-7 lg:col-start-6 lg:row-start-1 lg:-mt-28"
-        >
-          <span
-            aria-hidden="true"
-            className="absolute -top-4 left-1/2 h-8 w-28 -translate-x-1/2 -rotate-2 bg-primary/25 shadow-sm"
-          />
-          <h2
-            id="message-title"
-            className="text-3xl leading-tight font-extrabold tracking-[-0.02em]"
-          >
-            Send us a message
-          </h2>
-          <p className="mt-2 text-lg leading-snug text-muted-foreground">
-            We read every note and reply as soon as we can.
-          </p>
-          <div className="mt-8">
-            <ContactForm />
+      <div className="site-container pt-12 pb-20 sm:pt-16 lg:pb-28">
+        <div className="dark -mx-5 grid bg-brand text-foreground sm:mx-0 lg:grid-cols-12">
+          <div className="px-5 py-8 sm:p-8 lg:col-span-5 lg:border-r lg:border-foreground/20 xl:col-span-4 xl:p-10">
+            <ContactWays />
           </div>
-        </section>
+
+          <section
+            aria-labelledby="message-title"
+            className="border-t border-foreground/20 px-5 py-8 sm:p-8 lg:col-span-7 lg:border-t-0 xl:col-span-8 xl:p-10"
+          >
+            <h2
+              id="message-title"
+              className="text-3xl leading-none font-extrabold tracking-[-0.03em] sm:text-4xl"
+            >
+              What&apos;s on your heart?
+            </h2>
+            <p className="mt-2 text-lg leading-snug text-foreground/80">
+              Pick a topic, then tell us a little more. We reply as soon as we can.
+            </p>
+            <div className="mt-6">
+              <ContactForm />
+            </div>
+          </section>
+        </div>
       </div>
     </main>
   );
