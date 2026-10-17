@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Call02Icon, FavouriteIcon, Menu01Icon } from "@hugeicons/core-free-icons";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -43,8 +45,10 @@ function LogoSticker() {
 }
 
 export function MobileNavigation() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <Sheet>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger
         render={
           <Button
@@ -69,10 +73,11 @@ export function MobileNavigation() {
           <ul className="flex flex-col">
             {navigationLinks.map((link, index) => (
               <li key={link.label} className="border-b">
-                <a
+                <Link
                   href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
+                  target={link.href.startsWith("/") ? undefined : "_blank"}
+                  rel={link.href.startsWith("/") ? undefined : "noreferrer"}
+                  onClick={() => setIsOpen(false)}
                   className="group flex min-h-16 items-center gap-4 text-3xl font-bold tracking-tight"
                 >
                   <HugeiconsIcon
@@ -85,7 +90,7 @@ export function MobileNavigation() {
                     )}
                   />
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -95,6 +100,7 @@ export function MobileNavigation() {
             href={`${liveSite}/take-action`}
             target="_blank"
             rel="noreferrer"
+            onClick={() => setIsOpen(false)}
             className={cn(
               buttonVariants({ size: "lg" }),
               "home-button group w-full -rotate-1 bg-white text-primary-foreground shadow-[0_10px_24px_-8px_black] transition-transform duration-200 ease-out hover:rotate-0 hover:bg-white focus-visible:rotate-0",

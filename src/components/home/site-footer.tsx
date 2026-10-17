@@ -18,7 +18,7 @@ const footerLinks = [
   { label: "Sponsor", href: `${liveSite}/sponsor`, heart: "text-chart-4 rotate-12" },
   { label: "Store", href: `${liveSite}/store`, heart: "text-chart-5 -rotate-12" },
   { label: "Notary", href: `${liveSite}/notary`, heart: "text-chart-1 rotate-6" },
-  { label: "Contact", href: `${liveSite}/contact-us`, heart: "text-chart-2 -rotate-6" },
+  { label: "Contact", href: "/contact", heart: "text-chart-2 -rotate-6" },
 ];
 
 const directionsUrl =
@@ -52,10 +52,10 @@ function FooterNavigation() {
       <ul className="grid grid-cols-2 gap-x-8">
         {footerLinks.map((link) => (
           <li key={link.label}>
-            <a
+            <Link
               href={link.href}
-              target="_blank"
-              rel="noreferrer"
+              target={link.href.startsWith("/") ? undefined : "_blank"}
+              rel={link.href.startsWith("/") ? undefined : "noreferrer"}
               className="group inline-flex min-h-12 items-center gap-3 text-lg"
             >
               <HugeiconsIcon
@@ -68,7 +68,7 @@ function FooterNavigation() {
                 )}
               />
               <span className="underline-offset-[6px] group-hover:underline">{link.label}</span>
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

@@ -29,14 +29,14 @@ export function SiteHeader() {
           <ul className="flex items-center gap-1">
             {navigationLinks.map((link) => (
               <li key={link.label}>
-                <a
+                <Link
                   href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
+                  target={link.href.startsWith("/") ? undefined : "_blank"}
+                  rel={link.href.startsWith("/") ? undefined : "noreferrer"}
                   className="inline-flex min-h-11 items-center px-4 text-lg font-medium underline-offset-[6px] hover:underline"
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

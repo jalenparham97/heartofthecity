@@ -5,5 +5,5 @@ export const navigationLinks = [
   { label: "Events", href: `${liveSite}/events` },
   { label: "Store", href: `${liveSite}/store` },
   { label: "Notary", href: `${liveSite}/notary` },
-  { label: "Contact", href: `${liveSite}/contact-us` },
+  { label: "Contact", href: "/contact" },
 ];
