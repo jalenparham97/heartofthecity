@@ -6,7 +6,7 @@ export function HeartQuote() {
       aria-label="A guiding quote"
       className="ink-band relative isolate overflow-hidden text-primary-foreground"
     >
-      <div className="relative aspect-4/3 lg:absolute lg:inset-y-0 lg:right-0 lg:left-[46%] lg:aspect-auto xl:left-[38%]">
+      <div className="relative aspect-4/3 lg:absolute lg:inset-y-0 lg:right-0 lg:left-[46%] lg:aspect-auto xl:left-[42%]">
         <Image
           src="https://images.squarespace-cdn.com/content/v1/632de321be958318e9f257a4/5f5a5945-6ded-422d-977a-bb869483f2a4/FB_IMG_1687606277379+%281%29.jpg"
           alt="Heart of the City friends dusted in colored powder, cheering and leaning on each other on a sidewalk"

@@ -273,11 +273,24 @@
 @media (min-width: 1024px) {
   .quote-scrim {
     background:
+      linear-gradient(to right, var(--ink) 0%, transparent 22%),
+      linear-gradient(
+        to bottom,
+        transparent 60%,
+        color-mix(in oklch, var(--ink) 50%, transparent) 100%
+      );
+  }
+}
+
+/* From xl the quote overlaps the photo, so the fade reaches further in. */
+@media (min-width: 1280px) {
+  .quote-scrim {
+    background:
       linear-gradient(
         to right,
         var(--ink) 0%,
-        color-mix(in oklch, var(--ink) 55%, transparent) 22%,
-        transparent 50%
+        color-mix(in oklch, var(--ink) 55%, transparent) 16%,
+        transparent 34%
       ),
       linear-gradient(
         to bottom,
