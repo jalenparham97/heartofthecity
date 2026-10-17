@@ -37,7 +37,7 @@ export async function sendContactMessage(
   return {
     status: "unavailable",
     message:
-      "Online messages aren't connected yet. Email heartofthecity9809@gmail.com or call (989) 778-7899 and we'll help you there.",
+      "Online messages aren't connected yet. Email heartofthecity989@gmail.com or call (989) 778-7899 and we'll help you there.",
     errors: {},
     values,
   };

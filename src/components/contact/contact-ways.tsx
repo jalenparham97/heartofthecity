@@ -28,8 +28,8 @@ const ways = [
     color: "text-chart-3",
     lines: [],
     link: {
-      label: "heartofthecity9809@gmail.com",
-      href: "mailto:heartofthecity9809@gmail.com",
+      label: "heartofthecity989@gmail.com",
+      href: "mailto:heartofthecity989@gmail.com",
     },
   },
   {
