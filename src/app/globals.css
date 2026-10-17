@@ -1,26 +1,307 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-atkinson);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* Brand palette from the Heart of the City logo and flyer. */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.243 0.092 268.2);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.243 0.092 268.2);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.243 0.092 268.2);
+  --primary: oklch(0.354 0.168 298.4);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.955 0.02 305.3);
+  --secondary-foreground: oklch(0.3 0.146 291.2);
+  --muted: oklch(0.967 0.014 304.1);
+  --muted-foreground: oklch(0.47 0.055 293.6);
+  --accent: oklch(0.931 0.028 303.9);
+  --accent-foreground: oklch(0.3 0.146 291.2);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.908 0.03 305.1);
+  --input: oklch(0.876 0.04 304.9);
+  --ring: oklch(0.579 0.14 302);
+  /* The five logo pillars: educate, empower, include, support, heal. */
+  --chart-1: oklch(0.511 0.133 147.8);
+  --chart-2: oklch(0.53 0.207 26.9);
+  --chart-3: oklch(0.476 0.161 259.6);
+  --chart-4: oklch(0.348 0.154 312);
+  --chart-5: oklch(0.646 0.157 55.2);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.967 0.014 304.1);
+  --sidebar-foreground: oklch(0.243 0.092 268.2);
+  --sidebar-primary: oklch(0.354 0.168 298.4);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.931 0.028 303.9);
+  --sidebar-accent-foreground: oklch(0.3 0.146 291.2);
+  --sidebar-border: oklch(0.908 0.03 305.1);
+  --sidebar-ring: oklch(0.579 0.14 302);
+}
+
+.dark {
+  --background: oklch(0.188 0.067 291.9);
+  --foreground: oklch(0.965 0.019 299.1);
+  --card: oklch(0.232 0.082 291);
+  --card-foreground: oklch(0.965 0.019 299.1);
+  --popover: oklch(0.232 0.082 291);
+  --popover-foreground: oklch(0.965 0.019 299.1);
+  --primary: oklch(0.82 0.083 301.2);
+  --primary-foreground: oklch(0.267 0.13 291);
+  --secondary: oklch(0.277 0.096 292.4);
+  --secondary-foreground: oklch(0.965 0.019 299.1);
+  --muted: oklch(0.277 0.096 292.4);
+  --muted-foreground: oklch(0.773 0.058 297.6);
+  --accent: oklch(0.277 0.096 292.4);
+  --accent-foreground: oklch(0.965 0.019 299.1);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.579 0.14 302);
+  --chart-1: oklch(0.72 0.15 147.8);
+  --chart-2: oklch(0.68 0.19 26.9);
+  --chart-3: oklch(0.68 0.13 259.6);
+  --chart-4: oklch(0.7 0.13 312);
+  --chart-5: oklch(0.77 0.15 58.4);
+  --sidebar: oklch(0.232 0.082 291);
+  --sidebar-foreground: oklch(0.965 0.019 299.1);
+  --sidebar-primary: oklch(0.82 0.083 301.2);
+  --sidebar-primary-foreground: oklch(0.267 0.13 291);
+  --sidebar-accent: oklch(0.277 0.096 292.4);
+  --sidebar-accent-foreground: oklch(0.965 0.019 299.1);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.579 0.14 302);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  html {
+    @apply font-sans;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scrollbar-color: var(--muted-foreground) var(--secondary);
+  }
+
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 4px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-[88rem] px-5 sm:px-8 lg:px-12;
+  }
+
+  .skip-link {
+    @apply absolute top-3 left-3 z-50 -translate-y-24 bg-background px-6 py-4 text-foreground focus:translate-y-0;
+  }
+
+  .display-type {
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+  }
+
+  .section-title {
+    @apply text-[2.5rem] font-extrabold tracking-[-0.03em] sm:text-5xl xl:text-[3.5rem];
+    line-height: 1;
+  }
+
+  /* Learn. Grow. Engage. read as one line on large screens, each word filling its column. */
+  .program-word {
+    @apply text-[4rem] sm:text-[5rem];
+  }
+
+  @media (min-width: 1024px) {
+    .program-word {
+      font-size: min(calc((100vw - 10rem) / 13.5), 6.25rem);
+    }
+  }
+
+  .text-link {
+    @apply inline-flex min-h-11 items-center gap-2 text-lg font-bold underline decoration-2 underline-offset-[6px] hover:decoration-transparent;
+  }
+}
+
+/* Unlayered so it wins over the uppercase, extra-small base-sera button utilities. */
+.home-button {
+  @apply h-auto min-h-12 gap-2.5 px-6 py-3 text-base font-bold tracking-normal normal-case;
+}
+
+.home-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Two stacked lines on small screens, one full-width line over the photo on large ones. */
+.hero-title {
+  font-size: calc((100vw - 2.75rem) / 3.95);
+}
+
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: calc((100vw - 4.5rem) / 3.95);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: min(calc((36vw - 3rem) / 2.65), calc((100svh - 13rem) / 2.7), 13rem);
+  }
+}
+
+/* Near-black from the logo navy, so photos keep their own colors under a quiet shade. */
+.ink-band {
+  --ink: color-mix(in oklch, var(--foreground) 35%, black);
+  background: var(--ink);
+}
+
+/* Keeps the header readable at the top and fades the photo into ink where the type sits. */
+.hero-scrim {
+  background:
+    linear-gradient(
+      to bottom,
+      color-mix(in oklch, var(--ink) 60%, transparent) 0%,
+      transparent 24%
+    ),
+    linear-gradient(to bottom, transparent 55%, var(--ink) 96%);
+}
+
+@media (min-width: 1024px) {
+  .hero-scrim {
+    background:
+      linear-gradient(
+        to bottom,
+        color-mix(in oklch, var(--ink) 45%, transparent) 0%,
+        transparent 18%
+      ),
+      linear-gradient(
+        to right,
+        var(--ink) 0%,
+        color-mix(in oklch, var(--ink) 45%, transparent) 16%,
+        transparent 38%
+      ),
+      linear-gradient(
+        to bottom,
+        transparent 55%,
+        color-mix(in oklch, var(--ink) 60%, transparent) 78%,
+        color-mix(in oklch, var(--ink) 85%, transparent) 100%
+      );
+  }
+}
+
+/* Fades the quote photo into ink on the side where the quote sits. */
+.quote-scrim {
+  background: linear-gradient(to bottom, transparent 45%, var(--ink) 98%);
+}
+
+@media (min-width: 1024px) {
+  .quote-scrim {
+    background:
+      linear-gradient(
+        to right,
+        var(--ink) 0%,
+        color-mix(in oklch, var(--ink) 55%, transparent) 22%,
+        transparent 50%
+      ),
+      linear-gradient(
+        to bottom,
+        transparent 60%,
+        color-mix(in oklch, var(--ink) 50%, transparent) 100%
+      );
+  }
+}
+
+/* A soft halo keeps hero copy legible where it crosses light clothing. */
+.hero-copy {
+  text-shadow: 0 1px 16px color-mix(in oklch, var(--ink) 70%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

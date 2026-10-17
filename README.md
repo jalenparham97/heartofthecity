@@ -2,19 +2,22 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+Use Bun and Node.js 24 or newer. Install dependencies, then start the development server through Portless:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+bun install
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the URL printed by Portless, normally [https://heartofthecity.localhost](https://heartofthecity.localhost). Portless assigns the app a free port and proxies this stable hostname to it. Linked Git worktrees automatically get a branch-prefixed hostname.
+
+On this machine, port 443 is occupied, so the proxy is configured on port 1355: [https://heartofthecity.localhost:1355](https://heartofthecity.localhost:1355). Portless remembers and reuses the proxy configuration. To configure the same unprivileged proxy port on another machine:
+
+```bash
+bun run portless proxy start -p 1355
+```
+
+Check local routing and HTTPS with `bun run portless doctor`. To run Next.js directly without the proxy, use `PORTLESS=0 bun dev`.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 

@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
   },
+  images: {
+    remotePatterns: [
+      new URL("https://images.unsplash.com/**"),
+      new URL("https://video.squarespace-cdn.com/**"),
+    ],
+  },
   cacheComponents: true,
   partialPrefetching: true,
   reactCompiler: true,
