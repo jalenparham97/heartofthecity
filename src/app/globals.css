@@ -265,9 +265,9 @@
   }
 }
 
-/* Fades the quote photo into ink on the side where the quote sits. */
+/* Fades the quote photo into ink where the quote sits. */
 .quote-scrim {
-  background: linear-gradient(to bottom, transparent 45%, var(--ink) 98%);
+  background: linear-gradient(to bottom, transparent 40%, var(--ink) 92%);
 }
 
 @media (min-width: 1024px) {

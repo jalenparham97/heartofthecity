@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       new URL("https://images.unsplash.com/**"),
+      new URL("https://images.squarespace-cdn.com/**"),
       new URL("https://video.squarespace-cdn.com/**"),
     ],
   },

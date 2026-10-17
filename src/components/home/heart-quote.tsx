@@ -8,11 +8,11 @@ export function HeartQuote() {
     >
       <div className="relative aspect-4/3 lg:absolute lg:inset-y-0 lg:right-0 lg:left-[46%] lg:aspect-auto xl:left-[38%]">
         <Image
-          src="https://images.unsplash.com/photo-1656577796467-e049bfc98376"
-          alt="Three women sharing a long, close group hug"
+          src="https://images.squarespace-cdn.com/content/v1/632de321be958318e9f257a4/5f5a5945-6ded-422d-977a-bb869483f2a4/FB_IMG_1687606277379+%281%29.jpg"
+          alt="Heart of the City friends dusted in colored powder, cheering and leaning on each other on a sidewalk"
           fill
           sizes="(max-width: 1023px) 100vw, 62vw"
-          className="object-cover object-[60%_30%]"
+          className="object-cover object-[center_48%] lg:object-[center_32%]"
         />
         <div className="quote-scrim absolute inset-0" />
       </div>

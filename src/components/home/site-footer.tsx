@@ -149,7 +149,7 @@ export function SiteFooter() {
           <p>© Heart of the City Development Center</p>
           <p>A 501(c)(3) nonprofit in Saginaw, Michigan</p>
           <p>
-            Photos by{" "}
+            Hero photo by{" "}
             <a
               href="https://unsplash.com/photos/cylindrical-gray-container-on-park-during-daytime-rVZjYcZ3nc4"
               target="_blank"
@@ -157,15 +157,6 @@ export function SiteFooter() {
               className="underline underline-offset-4 hover:text-foreground"
             >
               Zoritsa Valova
-            </a>{" "}
-            and{" "}
-            <a
-              href="https://unsplash.com/photos/three-women-in-group-hug-BkhIxji_bJE"
-              target="_blank"
-              rel="noreferrer"
-              className="underline underline-offset-4 hover:text-foreground"
-            >
-              Jametlene Reskp
             </a>{" "}
             on Unsplash
           </p>
