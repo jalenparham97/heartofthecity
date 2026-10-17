@@ -1,4 +1,5 @@
-import { IconArrowUpRight } from "@tabler/icons-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
 import { EventFilm } from "@/components/home/event-film";
 import { liveSite } from "@/lib/site";
@@ -72,7 +73,7 @@ export function Community() {
                 className={cn(buttonVariants({ size: "lg" }), "home-button mt-6")}
               >
                 See upcoming events
-                <IconArrowUpRight aria-hidden="true" />
+                <HugeiconsIcon icon={ArrowUpRight01Icon} aria-hidden="true" />
               </a>
             </div>
           </div>

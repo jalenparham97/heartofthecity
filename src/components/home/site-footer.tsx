@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  IconArrowUpRight,
-  IconBrandFacebook,
-  IconBrandInstagram,
-  IconHeartFilled,
-} from "@tabler/icons-react";
+  ArrowUpRight01Icon,
+  Facebook01Icon,
+  FavouriteIcon,
+  InstagramIcon,
+} from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
 import { liveSite } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -57,7 +58,9 @@ function FooterNavigation() {
               rel="noreferrer"
               className="group inline-flex min-h-12 items-center gap-3 text-lg"
             >
-              <IconHeartFilled
+              <HugeiconsIcon
+                icon={FavouriteIcon}
+                fill="currentColor"
                 aria-hidden="true"
                 className={cn(
                   "size-5 shrink-0 transition-transform duration-200 ease-out group-hover:scale-125 group-focus-visible:scale-125",
@@ -83,7 +86,7 @@ function SocialLinks() {
         aria-label="Heart of the City on Facebook"
         className={buttonVariants({ variant: "secondary", size: "icon-lg" })}
       >
-        <IconBrandFacebook className="size-5" aria-hidden="true" />
+        <HugeiconsIcon icon={Facebook01Icon} className="size-5" aria-hidden="true" />
       </a>
       <a
         href="https://www.instagram.com/heartofthecity989/"
@@ -92,7 +95,7 @@ function SocialLinks() {
         aria-label="Heart of the City on Instagram"
         className={buttonVariants({ variant: "secondary", size: "icon-lg" })}
       >
-        <IconBrandInstagram className="size-5" aria-hidden="true" />
+        <HugeiconsIcon icon={InstagramIcon} className="size-5" aria-hidden="true" />
       </a>
     </div>
   );
@@ -132,7 +135,7 @@ export function SiteFooter() {
                   className={cn(buttonVariants({ size: "lg" }), "home-button")}
                 >
                   Get directions
-                  <IconArrowUpRight aria-hidden="true" />
+                  <HugeiconsIcon icon={ArrowUpRight01Icon} aria-hidden="true" />
                 </a>
                 <SocialLinks />
               </div>

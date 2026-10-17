@@ -1,39 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Heart of the City Development Center
 
-## Getting Started
+The redesigned homepage for [Heart of the City Development Center](https://www.heartofthecity989.com), a day program in Saginaw, Michigan, for adults with intellectual and developmental disabilities. Other pages still link to the live Squarespace site.
 
-Use Bun and Node.js 24 or newer. Install dependencies, then start the development server through Portless:
+## Stack
+
+- [Next.js 16](https://nextjs.org) with the App Router and React Compiler
+- React 19
+- [Tailwind CSS v4](https://tailwindcss.com) with CSS-first theme tokens in `src/app/globals.css`
+- [shadcn/ui](https://ui.shadcn.com) components on Base UI (`src/components/ui`)
+- [Hugeicons](https://hugeicons.com) for all icons
+- [Atkinson Hyperlegible Next](https://www.brailleinstitute.org/freefont/), chosen for readability, loaded with `next/font`
+- [hls.js](https://github.com/video-dev/hls.js) for the event videos
+- [oxlint](https://oxc.rs/docs/guide/usage/linter) and [oxfmt](https://oxc.rs) for linting and formatting
+- [Bun](https://bun.sh) as the package manager
+
+## Getting started
+
+Use Bun and Node.js 24 or newer:
 
 ```bash
 bun install
 bun dev
 ```
 
-Open the URL printed by Portless, normally [https://heartofthecity.localhost](https://heartofthecity.localhost). Portless assigns the app a free port and proxies this stable hostname to it. Linked Git worktrees automatically get a branch-prefixed hostname.
+Open the URL Portless prints, normally [https://heartofthecity.localhost](https://heartofthecity.localhost). If port 443 is taken, run `bun run portless proxy start -p 1355` once and use [https://heartofthecity.localhost:1355](https://heartofthecity.localhost:1355). To skip the proxy, use `PORTLESS=0 bun dev`.
 
-On this machine, port 443 is occupied, so the proxy is configured on port 1355: [https://heartofthecity.localhost:1355](https://heartofthecity.localhost:1355). Portless remembers and reuses the proxy configuration. To configure the same unprivileged proxy port on another machine:
+Lint and format with `bun run lint` and `bun run format`.
 
-```bash
-bun run portless proxy start -p 1355
-```
+## Where things live
 
-Check local routing and HTTPS with `bun run portless doctor`. To run Next.js directly without the proxy, use `PORTLESS=0 bun dev`.
+- `src/app/page.tsx`: the homepage, built from one component per section in `src/components/home`
+- `src/app/globals.css`: brand color tokens and shared styles
+- `public/images`: logo and program photos, each with a `.json` note on its source
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The hero and quote photos come from Unsplash (credited in the footer), and the event videos stream from the live site's Squarespace hosting.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Open items
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- The newsletter form isn't connected to a mailing service yet.
+- The footer address (804 S. Hamilton Street) differs from the flyer (4790 Gratiot Rd). Confirm which is current.
+- The event videos have no captions.

@@ -1,6 +1,7 @@
 "use client";
 
-import { IconMenu2, IconPhone } from "@tabler/icons-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Call02Icon, Menu01Icon } from "@hugeicons/core-free-icons";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Sheet,
@@ -25,7 +26,7 @@ export function MobileNavigation() {
           />
         }
       >
-        <IconMenu2 className="size-6" aria-hidden="true" />
+        <HugeiconsIcon icon={Menu01Icon} className="size-6" aria-hidden="true" />
         <span className="sr-only">Open menu</span>
       </SheetTrigger>
       <SheetContent side="right" className="w-full max-w-sm sm:max-w-sm">
@@ -63,7 +64,7 @@ export function MobileNavigation() {
             href="tel:+19897787899"
             className={cn(buttonVariants({ variant: "outline", size: "lg" }), "home-button w-full")}
           >
-            <IconPhone aria-hidden="true" />
+            <HugeiconsIcon icon={Call02Icon} aria-hidden="true" />
             (989) 778-7899
           </a>
         </SheetFooter>

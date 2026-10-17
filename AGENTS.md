@@ -30,7 +30,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Don't add crazy gradients, or crazy hover effects - Prefer subtle shadows and borders - Follow shadcn/ui design patterns and components where possible
 - Avoid custom colors outside of the design system - Prefer spacing that matches shadcn/ui design system
 - Always refer to the UI components that exist and the code within before creating a new component
-- Use tabler icons for icons - refer to existing usage for examples or fetch the latest from the docs
+- Use Hugeicons for icons (`@hugeicons/react` with `@hugeicons/core-free-icons`) - refer to existing usage for examples or fetch the latest from the docs
 
 ## Tailwind
 

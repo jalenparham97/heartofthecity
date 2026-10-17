@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { IconHeartFilled } from "@tabler/icons-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { FavouriteIcon } from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
 import { MobileNavigation } from "@/components/home/mobile-navigation";
 import { liveSite, navigationLinks } from "@/lib/site";
@@ -50,7 +51,9 @@ export function SiteHeader() {
               "home-button group hidden -rotate-2 bg-background text-foreground shadow-[0_10px_24px_-8px_black] transition-transform duration-200 ease-out hover:rotate-0 hover:bg-background focus-visible:rotate-0 sm:inline-flex",
             )}
           >
-            <IconHeartFilled
+            <HugeiconsIcon
+              icon={FavouriteIcon}
+              fill="currentColor"
               aria-hidden="true"
               className="size-5 -rotate-12 text-chart-2 transition-transform duration-200 ease-out group-hover:scale-125 group-hover:rotate-0 group-focus-visible:scale-125"
             />

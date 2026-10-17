@@ -1,25 +1,26 @@
+import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  IconApple,
-  IconAtom,
-  IconBarbell,
-  IconBook,
-  IconBriefcase,
-  IconCalendarEvent,
-  IconChefHat,
-  IconFriends,
-  IconHeartbeat,
-  IconHeartHandshake,
-  IconHomeHeart,
-  IconLocationHeart,
-  IconRibbonHealth,
-  IconSchool,
-  IconShieldHeart,
-  IconSpeakerphone,
-  IconTree,
-  IconUserStar,
-  IconUsers,
-  IconUsersGroup,
-} from "@tabler/icons-react";
+  Apple01Icon,
+  Atom02Icon,
+  Book02Icon,
+  Briefcase01Icon,
+  Calendar03Icon,
+  ChefHatIcon,
+  Dumbbell01Icon,
+  HeartHandshakeIcon,
+  HeartPulseIcon,
+  Home09Icon,
+  LocationFavourite01Icon,
+  Megaphone01Icon,
+  Mortarboard01Icon,
+  RibbonIcon,
+  ShieldUserIcon,
+  Tree01Icon,
+  UserGroup02Icon,
+  UserGroupIcon,
+  UserMultipleIcon,
+  UserStar01Icon,
+} from "@hugeicons/core-free-icons";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -37,7 +38,7 @@ const programs = [
     description:
       "A safe, supportive, and encouraging place for individuals with developmental disabilities to learn, grow, engage, and thrive.",
     tagline: "Inclusion. Opportunity. Belonging. Community.",
-    Icon: IconHomeHeart,
+    icon: Home09Icon,
     iconColor: "text-primary",
     panel: "bg-secondary",
     isNew: false,
@@ -47,45 +48,45 @@ const programs = [
         name: "Life skills development",
         description:
           "Everyday skills that build confidence and independence at home and out in the community.",
-        Icon: IconUsers,
+        icon: UserMultipleIcon,
         color: "text-chart-4",
       },
       {
         name: "Vocational readiness",
         description:
           "Getting ready for work, from job skills to the habits that help people keep a job.",
-        Icon: IconBriefcase,
+        icon: Briefcase01Icon,
         color: "text-chart-1",
       },
       {
         name: "Community engagement and outings",
         description:
           "Trips and activities that connect enrollees with neighbors and places around Saginaw.",
-        Icon: IconLocationHeart,
+        icon: LocationFavourite01Icon,
         color: "text-chart-2",
       },
       {
         name: "Technology and STEM opportunities",
         description: "Hands-on learning in science, technology, engineering, and math.",
-        Icon: IconAtom,
+        icon: Atom02Icon,
         color: "text-chart-3",
       },
       {
         name: "Health, wellness, and fitness activities",
         description: "Movement and healthy habits that support body and mind.",
-        Icon: IconBarbell,
+        icon: Dumbbell01Icon,
         color: "text-chart-5",
       },
       {
         name: "Social and recreational programming",
         description: "Games, events, and time together that grow real friendships.",
-        Icon: IconUsersGroup,
+        icon: UserGroupIcon,
         color: "text-chart-4",
       },
       {
         name: "Advocacy and resource connection",
         description: "Help speaking up for needs and finding the right services and support.",
-        Icon: IconHeartHandshake,
+        icon: HeartHandshakeIcon,
         color: "text-chart-1",
       },
     ],
@@ -98,7 +99,7 @@ const programs = [
     description:
       "Services focused on preventing challenges and building brighter futures for youth, teenagers, and families, designed to strengthen the whole family.",
     tagline: "Stronger youth. Stronger families. Stronger communities.",
-    Icon: IconChefHat,
+    icon: ChefHatIcon,
     iconColor: "text-chart-1",
     panel: mintPanel,
     isNew: true,
@@ -107,81 +108,81 @@ const programs = [
       {
         name: "Educational support and tutoring",
         description: "Help with schoolwork that builds confidence and keeps students on track.",
-        Icon: IconBook,
+        icon: Book02Icon,
         color: "text-chart-1",
       },
       {
         name: "Before and after school programs",
         description: "A safe, structured place for kids before and after the school day.",
-        Icon: IconSchool,
+        icon: Mortarboard01Icon,
         color: "text-chart-4",
       },
       {
         name: "Life skills and social skills",
         description: "Practical skills for daily life and for getting along with others.",
-        Icon: IconApple,
+        icon: Apple01Icon,
         color: "text-chart-2",
       },
       {
         name: "STEM learning opportunities",
         description: "Hands-on projects in science, technology, engineering, and math.",
-        Icon: IconAtom,
+        icon: Atom02Icon,
         color: "text-chart-3",
       },
       {
         name: "Mental health and wellness education",
         description:
           "Tools for handling stress and big feelings, and knowing when to ask for help.",
-        Icon: IconHeartbeat,
+        icon: HeartPulseIcon,
         color: "text-chart-5",
       },
       {
         name: "Substance use prevention and education",
         description: "Honest information that helps young people make healthy choices.",
-        Icon: IconRibbonHealth,
+        icon: RibbonIcon,
         color: "text-chart-4",
       },
       {
         name: "Domestic violence prevention and support",
         description: "Education and support for safer, healthier relationships at home.",
-        Icon: IconShieldHeart,
+        icon: ShieldUserIcon,
         color: "text-chart-1",
       },
       {
         name: "Family support groups",
         description:
           "A place for families to share what they are going through and support each other.",
-        Icon: IconFriends,
+        icon: UserGroup02Icon,
         color: "text-chart-4",
       },
       {
         name: "Advocacy and mentoring",
         description: "Caring adults who guide young people and speak up for their needs.",
-        Icon: IconSpeakerphone,
+        icon: Megaphone01Icon,
         color: "text-chart-2",
       },
       {
         name: "Youth leadership and community service",
         description: "Chances to lead, volunteer, and give back to the community.",
-        Icon: IconUserStar,
+        icon: UserStar01Icon,
         color: "text-chart-3",
       },
       {
         name: "Parent support programs",
         description: "Guidance and encouragement for the everyday work of parenting.",
-        Icon: IconHeartHandshake,
+        icon: HeartHandshakeIcon,
         color: "text-chart-5",
       },
       {
         name: "Community resources and referrals",
         description: "Connections to local services when your family needs more help.",
-        Icon: IconTree,
+        icon: Tree01Icon,
         color: "text-chart-1",
       },
       {
         name: "Workshops, events, and summer programming",
         description: "Learning and fun all year long, including summer programs.",
-        Icon: IconCalendarEvent,
+        icon: Calendar03Icon,
         color: "text-chart-4",
       },
     ],
@@ -242,9 +243,10 @@ export function Mission() {
             >
               <header className="flex flex-col gap-6 border-b border-foreground/10 pb-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
                 <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-8">
-                  <program.Icon
+                  <HugeiconsIcon
+                    icon={program.icon}
                     className={cn("size-20 shrink-0 sm:size-28", program.iconColor)}
-                    stroke={1}
+                    strokeWidth={1}
                     aria-hidden="true"
                   />
                   <div>
@@ -274,9 +276,10 @@ export function Mission() {
               <ul className="mt-8 grid gap-x-10 gap-y-7 sm:grid-cols-2 xl:mt-10 xl:grid-cols-3 xl:gap-y-8">
                 {program.services.map((service) => (
                   <li key={service.name} className="flex gap-3 sm:gap-4">
-                    <service.Icon
+                    <HugeiconsIcon
+                      icon={service.icon}
                       className={cn("size-10 shrink-0 sm:size-12", service.color)}
-                      stroke={1.5}
+                      strokeWidth={1.5}
                       aria-hidden="true"
                     />
                     <div>

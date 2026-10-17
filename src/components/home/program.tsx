@@ -1,4 +1,5 @@
-import { IconPhone } from "@tabler/icons-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Call02Icon } from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
 import { liveSite } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -82,7 +83,7 @@ export function Program() {
               href="tel:+19897787899"
               className={cn("dark", buttonVariants({ size: "lg" }), "home-button")}
             >
-              <IconPhone aria-hidden="true" />
+              <HugeiconsIcon icon={Call02Icon} aria-hidden="true" />
               (989) 778-7899
             </a>
           </div>

@@ -1,4 +1,5 @@
-import { IconHeartFilled } from "@tabler/icons-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { FavouriteIcon } from "@hugeicons/core-free-icons";
 import { NewsletterForm } from "@/components/home/newsletter-form";
 import { cn } from "@/lib/utils";
 
@@ -15,10 +16,12 @@ function HeartPile() {
   return (
     <span aria-hidden="true" className="relative block size-28 shrink-0">
       {hearts.map((heart) => (
-        <IconHeartFilled
+        <HugeiconsIcon
+          icon={FavouriteIcon}
+          fill="currentColor"
           key={heart.color}
           className={cn(
-            "absolute stroke-secondary stroke-2 transition-transform duration-300 ease-out [paint-order:stroke] group-focus-within/newsletter:-translate-y-2",
+            "absolute transition-transform duration-300 ease-out group-focus-within/newsletter:-translate-y-2 [&_path]:stroke-secondary [&_path]:stroke-2 [&_path]:[paint-order:stroke]",
             heart.color,
             heart.place,
             heart.delay,

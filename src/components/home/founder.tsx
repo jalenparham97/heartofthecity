@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { IconArrowUpRight } from "@tabler/icons-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
 import { liveSite } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -76,7 +77,7 @@ export function Founder() {
               className={cn(buttonVariants({ size: "lg" }), "home-button mt-8")}
             >
               Read Cherie&apos;s story
-              <IconArrowUpRight aria-hidden="true" />
+              <HugeiconsIcon icon={ArrowUpRight01Icon} aria-hidden="true" />
             </a>
           </div>
         </div>

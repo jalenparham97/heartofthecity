@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import type Hls from "hls.js";
-import { IconPlayerPlayFilled } from "@tabler/icons-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { PlayIcon } from "@hugeicons/core-free-icons";
 
 type EventFilmProps = {
   title: string;
@@ -79,7 +80,12 @@ export function EventFilm({
           >
             <span className="flex items-center gap-3 bg-primary text-primary-foreground transition-colors group-hover:bg-foreground group-focus-visible:ring-4 group-focus-visible:ring-ring">
               <span className="flex size-14 items-center justify-center bg-foreground/15 sm:size-16">
-                <IconPlayerPlayFilled className="size-6" aria-hidden="true" />
+                <HugeiconsIcon
+                  icon={PlayIcon}
+                  fill="currentColor"
+                  className="size-6"
+                  aria-hidden="true"
+                />
               </span>
               {isFeatured && (
                 <span className="pr-6 text-lg font-bold">
