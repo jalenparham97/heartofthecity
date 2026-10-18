@@ -17,6 +17,13 @@ const ways = [
     heart: "text-chart-1",
     tilt: "rotate-2 sm:translate-x-10",
   },
+  {
+    label: "Sponsor",
+    note: "Give as a business or organization",
+    href: "#sponsor",
+    heart: "text-chart-5",
+    tilt: "-rotate-1 sm:translate-x-3",
+  },
 ];
 
 /* Two big stickers: the page's two ways to help, one tap from the top. */
@@ -75,7 +82,7 @@ export function ActionHero() {
           </p>
         </div>
         <nav aria-label="Ways to help" className="lg:col-span-6 lg:col-start-7">
-          <ul className="flex max-w-lg flex-col gap-6 sm:gap-8 lg:ml-auto">
+          <ul className="flex max-w-lg flex-col gap-5 sm:gap-7 lg:ml-auto">
             {ways.map((way) => (
               <li key={way.label}>
                 <WaySticker way={way} />

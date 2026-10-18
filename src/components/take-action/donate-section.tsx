@@ -6,13 +6,14 @@ import {
   FavouriteIcon,
   SmartPhone01Icon,
 } from "@hugeicons/core-free-icons";
+import { donateOnlineUrl } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const options = [
   {
     title: "Donate online",
     note: "Give any amount by card through our secure Square page.",
-    href: "https://square.link/u/0Uqx0rmx",
+    href: donateOnlineUrl,
     icon: CreditCardIcon,
     color: "text-chart-3",
     hover:

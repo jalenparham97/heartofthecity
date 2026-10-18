@@ -24,7 +24,7 @@ const ways = [
     title: "Become a sponsor",
     description:
       "Help us build more opportunities for individuals and families across Saginaw County, from day programming to community events.",
-    action: { label: "Learn about sponsorship", href: `${liveSite}/sponsor` },
+    action: { label: "Learn about sponsorship", href: "/sponsor" },
     photo: {
       src: "/images/celebration.jpg",
       alt: "Two supporters wearing Heart of the City shirts",

@@ -7,3 +7,6 @@ export const navigationLinks = [
   { label: "Notary", href: `${liveSite}/notary` },
   { label: "Contact", href: "/contact" },
 ];
+
+export const sponsorshipFormUrl = `${liveSite}/s/HOTC-Sponsorship-Form.pdf`;
+export const donateOnlineUrl = "https://square.link/u/0Uqx0rmx";
