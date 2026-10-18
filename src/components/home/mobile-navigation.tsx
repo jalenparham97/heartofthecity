@@ -26,19 +26,28 @@ const linkHearts = [
   "text-chart-5 -rotate-12",
 ];
 
+/* The header's logo sticker, with the same two corner hearts. */
 function LogoSticker() {
   return (
-    <span className="relative block w-fit -rotate-3 bg-white p-2 shadow-[0_12px_28px_-10px_black]">
-      <span
-        aria-hidden="true"
-        className="absolute -top-3 left-1/2 h-6 w-16 -translate-x-1/2 rotate-2 bg-primary/70 shadow-sm"
-      />
+    <span className="relative block w-fit rotate-3 bg-white p-2 shadow-[0_12px_28px_-10px_black]">
       <Image
         src="/images/hotc-emblem.png"
         alt="Heart of the City Development Center"
         width={986}
         height={897}
         className="h-16 w-auto"
+      />
+      <HugeiconsIcon
+        icon={FavouriteIcon}
+        fill="currentColor"
+        aria-hidden="true"
+        className="absolute -top-3 -right-3.5 size-8 rotate-12 text-chart-2 [&_path]:stroke-white [&_path]:stroke-[3] [&_path]:[paint-order:stroke]"
+      />
+      <HugeiconsIcon
+        icon={FavouriteIcon}
+        fill="currentColor"
+        aria-hidden="true"
+        className="absolute -bottom-2.5 -left-3 size-7 -rotate-12 text-chart-1 [&_path]:stroke-white [&_path]:stroke-[3] [&_path]:[paint-order:stroke]"
       />
     </span>
   );
