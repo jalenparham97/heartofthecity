@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
+import { ArrowRight01Icon, ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
 import { liveSite } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -10,7 +11,7 @@ const ways = [
     title: "Volunteer your time",
     description:
       "Bring your talents to our community and spend time with our enrollees. Every hour helps someone learn, grow, and engage.",
-    action: { label: "See volunteer opportunities", href: `${liveSite}/take-action` },
+    action: { label: "See volunteer opportunities", href: "/take-action#volunteer" },
     photo: {
       src: "/images/connection.jpg",
       alt: "Two women in Heart of the City shirts smiling beside the center's banner",
@@ -95,15 +96,18 @@ export function GetInvolved() {
                 <h3 className="text-2xl font-extrabold tracking-[-0.01em]">{way.title}</h3>
                 <p className="mt-2 text-lg leading-snug text-muted-foreground">{way.description}</p>
                 <div className="mt-auto pt-6">
-                  <a
+                  <Link
                     href={way.action.href}
-                    target="_blank"
-                    rel="noreferrer"
+                    target={way.action.href.startsWith("/") ? undefined : "_blank"}
+                    rel={way.action.href.startsWith("/") ? undefined : "noreferrer"}
                     className={cn(buttonVariants({ size: "lg" }), "home-button")}
                   >
                     {way.action.label}
-                    <HugeiconsIcon icon={ArrowUpRight01Icon} aria-hidden="true" />
-                  </a>
+                    <HugeiconsIcon
+                      icon={way.action.href.startsWith("/") ? ArrowRight01Icon : ArrowUpRight01Icon}
+                      aria-hidden="true"
+                    />
+                  </Link>
                 </div>
               </div>
             </li>

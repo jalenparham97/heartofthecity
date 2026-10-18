@@ -14,7 +14,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { liveSite, navigationLinks } from "@/lib/site";
+import { navigationLinks } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 /* One pillar-colored heart per link, matching the footer. */
@@ -96,10 +96,8 @@ export function MobileNavigation() {
           </ul>
         </nav>
         <SheetFooter className="gap-3">
-          <a
-            href={`${liveSite}/take-action`}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            href="/take-action"
             onClick={() => setIsOpen(false)}
             className={cn(
               buttonVariants({ size: "lg" }),
@@ -113,7 +111,7 @@ export function MobileNavigation() {
               className="size-5 -rotate-12 text-chart-2 transition-transform duration-200 ease-out group-hover:scale-125 group-hover:rotate-0 group-focus-visible:scale-125"
             />
             Take action
-          </a>
+          </Link>
           <a
             href="tel:+19897787899"
             className={cn(
