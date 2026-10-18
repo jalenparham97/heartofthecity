@@ -1,0 +1,130 @@
+import { liveSite } from "@/lib/site";
+
+const squarespaceImages = "https://images.squarespace-cdn.com/content/v1/632de321be958318e9f257a4";
+
+/* Merch from the live store. Buttons go to each product's page there until checkout moves here. */
+export const products = [
+  {
+    name: "Puzzle Heart Shirt",
+    detail: "Navy, with a puzzle-piece heart and HOTCD down the front",
+    price: "$45",
+    href: `${liveSite}/store/p/on3ibjevkjq780c8689dxrp5a4m7lv`,
+    image: `${squarespaceImages}/1712886970021-FHHN2KQ4FDL3U7X2YW6L/processed_988af502f80d4dc185877331f8af166a.jpeg`,
+    alt: "Navy shirt printed with colorful puzzle pieces and a red heart outline",
+  },
+  {
+    name: "T-Shirts",
+    detail: "White, with the Heart of the City logo",
+    price: "$25",
+    href: `${liveSite}/store/p/harvest-moon-cup-5fc72-k9d8e`,
+    image: `${squarespaceImages}/1664389884164-6TWK4FYXU5UPA3QCTAA1/FB_IMG_1664036725435.jpg`,
+    alt: "A young woman wearing a white Heart of the City T-shirt",
+  },
+  {
+    name: "Sweatshirts",
+    detail: "Navy crewneck, with Learn Grow Engage on the back",
+    price: "$40",
+    href: `${liveSite}/store/p/harvest-moon-cup-5fc72-k9d8e-xc45y`,
+    image: `${squarespaceImages}/1667327790824-60QQWUAFJAUGSNSWIUVP/Screenshot_20221027-101356_3.png`,
+    alt: "Front and back of a navy sweatshirt with a red heart and the words Learn Grow Engage",
+  },
+  {
+    name: "Hoodies",
+    detail: "Navy, with the logo on the front and HOTCD on the sleeve",
+    price: "$50",
+    href: `${liveSite}/store/p/harvest-moon-cup-5fc72-k9d8e-xc45y-tt3dn`,
+    image: `${squarespaceImages}/1667327677041-USZ5EAEBER7LNX4SCADS/Screenshot_20221027-101356_2.png`,
+    alt: "Navy hoodie with the Heart of the City logo and HOTCD down the sleeve",
+  },
+  {
+    name: "T-Shirt",
+    detail: "Black, with a colorful disability-awareness design",
+    price: "$25",
+    href: `${liveSite}/store/p/harvest-moon-cup-5fc72-k9d8e-jym79`,
+    image: `${squarespaceImages}/1701117773541-397FCBPI04EIVYYVYWHM/Screenshot_20231028-195013%7E2.png`,
+    alt: "Black T-shirt shown front, side and back with colorful puzzle-piece lettering",
+  },
+  {
+    name: "Tall Tumbler",
+    detail: "Black, with colorful awareness lettering",
+    price: "$25",
+    href: `${liveSite}/store/p/earth-sky-planter-4awkk-sb2lx-324pl`,
+    image: `${squarespaceImages}/1701117559479-SE8CE1QT6J1F7EUQFWG9/Screen+Shot+2023-11-27+at+3.38.38+PM.png`,
+    alt: "Tall black tumbler with colorful lettering",
+  },
+  {
+    name: "Earrings",
+    detail: "Round black discs with colorful awareness lettering",
+    price: "$15",
+    href: `${liveSite}/store/p/earrings-kh8wa`,
+    image: `${squarespaceImages}/1701117373759-E8PKVUE9LK5EG2QE94EC/Screenshot_20231114-102633.jpg`,
+    alt: "A pair of round black earrings with colorful lettering",
+  },
+  {
+    name: "HOTC Earrings",
+    detail: "Round white discs with the Heart of the City logo",
+    price: "$15",
+    href: `${liveSite}/store/p/earrings`,
+    image: `${squarespaceImages}/1666844631948-PN7N3VH8R9W8RBLHZKQD/IMG_20221007_203417937+%281%29.jpg`,
+    alt: "A pair of round white earrings printed with the Heart of the City logo",
+  },
+  {
+    name: "HOTC Tall Tumbler",
+    detail: "With our tagline: a place to learn, grow & engage",
+    price: "$25",
+    href: `${liveSite}/store/p/earth-sky-planter-4awkk-sb2lx`,
+    image: `${squarespaceImages}/1664389237369-B0LUH626KB7LG95GK5DH/IMG_20220924_111118701.jpg`,
+    alt: "Tall tumbler printed with the center's tagline on a table",
+  },
+  {
+    name: "Wine Tumblers",
+    detail: "White, stemless, with the logo",
+    price: "$15",
+    href: `${liveSite}/store/p/golden-mist-cup-weny8-bw8n7`,
+    image: `${squarespaceImages}/1664393791295-KAZAAP1GBLHINI2YJ1LA/62e5e13ba7cac9.58132031.png`,
+    alt: "White stemless wine tumbler with the Heart of the City logo",
+  },
+  {
+    name: "Coffee Mugs",
+    detail: "White, with the logo",
+    price: "$12",
+    href: `${liveSite}/store/p/spring-bowl-rltkk-ac23l`,
+    image: `${squarespaceImages}/1664332569377-XSKMW7I43OEENTBV4TOG/FB_IMG_1664036244672.jpg`,
+    alt: "White coffee mug with the Heart of the City logo",
+  },
+  {
+    name: "Key Chains",
+    detail: "Round, white, with the logo",
+    price: "$6",
+    href: `${liveSite}/store/p/milk-dip-cup-92wf6-zpafr`,
+    image: `${squarespaceImages}/1664332411462-MEH23KFIM9H2T60L5UL5/FB_IMG_1664036331109.jpg`,
+    alt: "Round white key chains printed with the Heart of the City logo",
+  },
+  {
+    name: "Can Koozies",
+    detail: "White, with the logo",
+    price: "$5",
+    href: `${liveSite}/store/p/country-feast-set-3nybt-s6344`,
+    image: `${squarespaceImages}/1664332317520-P3Y0AC48VDTQRFNTK1G5/FB_IMG_1664036450837.jpg`,
+    alt: "White can koozies printed with the Heart of the City logo",
+  },
+];
+
+export const dayPrograms = [
+  {
+    name: "Level 1",
+    support: "No physical support needed",
+    fullDay: "$112",
+    halfDay: "$56",
+    href: `${liveSite}/store/p/adult-day-program-payment`,
+    heart: "text-chart-1",
+  },
+  {
+    name: "Level 2",
+    support: "Physical support needed",
+    fullDay: "$128",
+    halfDay: "$64",
+    href: `${liveSite}/store/p/4sin7h5axblptuurf2mwaq0n4ocan1`,
+    heart: "text-chart-3",
+  },
+];

@@ -3,7 +3,6 @@ import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowRight01Icon, ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
-import { liveSite } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const ways = [
@@ -37,7 +36,7 @@ const ways = [
     title: "Shop the store",
     description:
       "Mugs, keychains, and shirts with our logo. All proceeds go toward the growth of our program.",
-    action: { label: "Visit the store", href: `${liveSite}/store` },
+    action: { label: "Visit the store", href: "/store" },
     photo: {
       src: "/images/community.jpg",
       alt: "A Heart of the City mug, keychains, and koozie from the center's store",
