@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 const footerLinks = [
   { label: "About", href: "/about", heart: "text-chart-1 -rotate-12" },
   { label: "Take action", href: "/take-action", heart: "text-chart-2 rotate-6" },
-  { label: "Events", href: `${liveSite}/events`, heart: "text-chart-3 -rotate-6" },
+  { label: "Events", href: "/events", heart: "text-chart-3 -rotate-6" },
   { label: "Sponsor", href: `${liveSite}/sponsor`, heart: "text-chart-4 rotate-12" },
   { label: "Store", href: `${liveSite}/store`, heart: "text-chart-5 -rotate-12" },
   { label: "Notary", href: `${liveSite}/notary`, heart: "text-chart-1 rotate-6" },
