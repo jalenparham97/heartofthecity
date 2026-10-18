@@ -12,7 +12,7 @@ import { liveSite } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const footerLinks = [
-  { label: "About", href: `${liveSite}/about`, heart: "text-chart-1 -rotate-12" },
+  { label: "About", href: "/about", heart: "text-chart-1 -rotate-12" },
   { label: "Take action", href: `${liveSite}/take-action`, heart: "text-chart-2 rotate-6" },
   { label: "Events", href: `${liveSite}/events`, heart: "text-chart-3 -rotate-6" },
   { label: "Sponsor", href: `${liveSite}/sponsor`, heart: "text-chart-4 rotate-12" },
