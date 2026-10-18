@@ -28,13 +28,13 @@ const topics = [
 
 const labelStyle = "text-lg font-bold tracking-normal normal-case";
 const boxStyle =
-  "border-0 bg-white px-4 text-lg text-primary-foreground focus-visible:ring-4 focus-visible:ring-primary/60 aria-invalid:ring-4 aria-invalid:ring-destructive/70 md:text-lg";
+  "border-2 border-foreground/15 bg-white px-4 text-lg text-foreground focus-visible:border-primary focus-visible:ring-4 focus-visible:ring-primary/20 aria-invalid:border-destructive aria-invalid:ring-4 aria-invalid:ring-destructive/20 md:text-lg";
 
-/* Light bold text stays readable on purple; the red icon marks it as an error. */
+/* Bold red text with an alert icon, so errors read as errors without relying on color alone. */
 function ErrorText({ id, message }: { id?: string; message?: string }) {
   if (!message) return null;
   return (
-    <FieldError id={id} className="flex items-start gap-1.5 text-base font-bold text-foreground">
+    <FieldError id={id} className="flex items-start gap-1.5 text-base font-bold text-destructive">
       <HugeiconsIcon
         icon={Alert02Icon}
         strokeWidth={2}
@@ -60,7 +60,7 @@ function TopicChips({ selected, error }: { selected: string; error?: string }) {
               defaultChecked={selected === topic.label}
               className="peer sr-only"
             />
-            <span className="flex min-h-11 items-center gap-2 border-2 border-foreground/25 px-3.5 text-base font-bold transition-[transform,background-color,color,border-color] duration-200 ease-out peer-checked:-rotate-2 peer-checked:border-white peer-checked:bg-white peer-checked:text-primary-foreground peer-checked:shadow-[0_10px_24px_-8px_black] peer-checked:[&_svg]:fill-current peer-focus-visible:ring-4 peer-focus-visible:ring-primary/60 hover:border-foreground/60">
+            <span className="flex min-h-11 items-center gap-2 border-2 border-foreground/10 bg-background/50 px-3.5 text-base font-bold transition-[transform,background-color,color,border-color] duration-200 ease-out peer-checked:-rotate-2 peer-checked:border-white peer-checked:bg-white peer-checked:text-primary peer-checked:shadow-[0_10px_24px_-10px_color-mix(in_oklch,var(--foreground)_45%,transparent)] peer-checked:[&_svg]:fill-current peer-focus-visible:ring-4 peer-focus-visible:ring-primary/30 hover:border-foreground/25 peer-checked:hover:border-white">
               <HugeiconsIcon
                 icon={FavouriteIcon}
                 strokeWidth={2}
@@ -164,7 +164,7 @@ export function ContactForm() {
           type="submit"
           size="lg"
           disabled={isPending}
-          className="home-button group -rotate-1 bg-white text-primary-foreground shadow-[0_10px_24px_-8px_black] transition-transform duration-200 ease-out hover:rotate-0 hover:bg-white focus-visible:rotate-0 sm:w-auto"
+          className="home-button group -rotate-1 bg-white text-primary shadow-[0_10px_24px_-10px_color-mix(in_oklch,var(--foreground)_45%,transparent)] transition-transform duration-200 ease-out hover:rotate-0 hover:bg-white focus-visible:rotate-0 sm:w-auto"
         >
           <HugeiconsIcon
             icon={FavouriteIcon}
@@ -178,7 +178,7 @@ export function ContactForm() {
           aria-live="polite"
           className={cn(
             "text-base leading-snug",
-            state.status === "invalid" ? "font-bold text-foreground" : "text-foreground/80",
+            state.status === "invalid" ? "font-bold text-destructive" : "text-muted-foreground",
           )}
         >
           {state.message}

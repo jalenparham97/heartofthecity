@@ -46,9 +46,9 @@ const ways = [
 ];
 
 /* Tiles echo the topic chips; the tappable ones turn into white stickers on hover. */
-const tileStyle = "relative flex gap-3 border-2 border-foreground/25 p-3.5 sm:p-4";
+const tileStyle = "relative flex gap-3 border-2 border-foreground/15 p-3.5 sm:p-4";
 const tappableStyle =
-  "transition-[transform,background-color,color,border-color] duration-200 ease-out hover:-rotate-1 hover:border-white hover:bg-white hover:text-primary-foreground focus-visible:-rotate-1 focus-visible:border-white focus-visible:bg-white focus-visible:text-primary-foreground focus-visible:outline-none";
+  "transition-[transform,background-color,color,border-color] duration-200 ease-out hover:-rotate-1 hover:border-white hover:bg-white hover:text-primary hover:shadow-[0_10px_24px_-10px_color-mix(in_oklch,var(--foreground)_45%,transparent)] focus-visible:-rotate-1 focus-visible:border-white focus-visible:bg-white focus-visible:text-primary focus-visible:shadow-[0_10px_24px_-10px_color-mix(in_oklch,var(--foreground)_45%,transparent)] focus-visible:outline-none";
 
 function WayContent({ way }: { way: (typeof ways)[number] }) {
   return (
@@ -91,7 +91,7 @@ export function ContactWays() {
             target="_blank"
             rel="noreferrer"
             aria-label="Heart of the City on Facebook"
-            className={buttonVariants({ variant: "secondary", size: "icon-lg" })}
+            className={buttonVariants({ size: "icon-lg" })}
           >
             <HugeiconsIcon icon={Facebook01Icon} className="size-5" aria-hidden="true" />
           </a>
@@ -100,7 +100,7 @@ export function ContactWays() {
             target="_blank"
             rel="noreferrer"
             aria-label="Heart of the City on Instagram"
-            className={buttonVariants({ variant: "secondary", size: "icon-lg" })}
+            className={buttonVariants({ size: "icon-lg" })}
           >
             <HugeiconsIcon icon={InstagramIcon} className="size-5" aria-hidden="true" />
           </a>
