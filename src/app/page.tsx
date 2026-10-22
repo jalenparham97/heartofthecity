@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <main id="main-content">
       <Hero />
-      <Mission />
       <Program />
+      <Mission />
       <HeartQuote />
       <Founder />
       <Community />

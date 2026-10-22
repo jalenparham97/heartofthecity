@@ -91,8 +91,8 @@ export function Hero() {
             keep learning, growing, and belonging.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="#program" className={cn(buttonVariants({ size: "lg" }), "home-button")}>
-              Explore the program
+            <a href="#services" className={cn(buttonVariants({ size: "lg" }), "home-button")}>
+              Explore our programs
             </a>
             <a
               href="#get-involved"

@@ -73,13 +73,13 @@ export function AboutDifference() {
               services beyond the age of 26.
             </p>
             <Link
-              href="/#program"
+              href="/#services"
               className={cn(
                 buttonVariants({ variant: "secondary", size: "lg" }),
                 "home-button mt-8",
               )}
             >
-              See a day in the program
+              Explore our programs
             </Link>
           </div>
         </div>

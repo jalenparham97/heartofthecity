@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Apple01Icon,
@@ -24,7 +25,6 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { liveSite } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const mintPanel = "bg-[color-mix(in_oklch,var(--chart-1)_7%,var(--background))]";
@@ -42,7 +42,7 @@ const programs = [
     iconColor: "text-primary",
     panel: "bg-secondary",
     isNew: false,
-    action: { label: "See a day in the program", href: "#program" },
+    action: { label: "Learn about the day program", href: "/about" },
     services: [
       {
         name: "Life skills development",
@@ -103,7 +103,7 @@ const programs = [
     iconColor: "text-chart-1",
     panel: mintPanel,
     isNew: true,
-    action: { label: "Ask about youth programs", href: `${liveSite}/contact-us` },
+    action: { label: "Ask about youth programs", href: "/contact" },
     services: [
       {
         name: "Educational support and tutoring",
@@ -199,7 +199,7 @@ function NewBadge() {
 
 export function Mission() {
   return (
-    <section aria-labelledby="mission-title" className="bg-background">
+    <section id="services" aria-labelledby="mission-title" className="scroll-mt-6 bg-background">
       <div className="site-container py-16 lg:py-20">
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end lg:gap-x-8">
           <h2 id="mission-title" className="section-title lg:col-span-9">
@@ -260,17 +260,15 @@ export function Mission() {
                     </p>
                   </div>
                 </div>
-                <a
+                <Link
                   href={program.action.href}
-                  target={program.action.href.startsWith("#") ? undefined : "_blank"}
-                  rel={program.action.href.startsWith("#") ? undefined : "noreferrer"}
                   className={cn(
                     buttonVariants({ size: "lg" }),
                     "home-button shrink-0 self-start lg:self-center",
                   )}
                 >
                   {program.action.label}
-                </a>
+                </Link>
               </header>
 
               <ul className="mt-8 grid gap-x-10 gap-y-7 sm:grid-cols-2 xl:mt-10 xl:grid-cols-3 xl:gap-y-8">
