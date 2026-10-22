@@ -1,6 +1,41 @@
 import Image from "next/image";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { FavouriteIcon } from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
+/* The logo's five pillar colors as one hand-drawn squiggle, drawn in segment by segment on load. */
+const squiggleColors = [
+  "stroke-chart-1",
+  "stroke-chart-2",
+  "stroke-chart-3",
+  "stroke-chart-4",
+  "stroke-chart-5",
+];
+
+function PillarSquiggle() {
+  return (
+    <svg
+      viewBox="0 0 500 24"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+      className="dark absolute top-full left-0 mt-[0.08em] h-[0.32em] w-full overflow-visible"
+    >
+      {squiggleColors.map((color, index) => (
+        <path
+          key={color}
+          d={`M ${index * 100 + 6},12 q 22,-11 44,0 t 44,0`}
+          pathLength={1}
+          fill="none"
+          strokeLinecap="round"
+          vectorEffect="non-scaling-stroke"
+          className={cn("squiggle-draw [stroke-width:0.1em]", color)}
+          style={{ animationDelay: `${300 + index * 140}ms` }}
+        />
+      ))}
+    </svg>
+  );
+}
 
 export function Hero() {
   return (
@@ -25,8 +60,29 @@ export function Hero() {
           Heart <br className="max-lg:hidden" />
           of <br className="lg:hidden" />
           the <br className="max-lg:hidden" />
-          City
-          <span className="sr-only"> Development Center</span>
+          {/* A red heart stands in for the dot on the i in City. */}
+          <span aria-hidden="true">
+            C
+            <span className="relative">
+              ı
+              <HugeiconsIcon
+                icon={FavouriteIcon}
+                fill="currentColor"
+                className="absolute top-[0.21em] left-1/2 size-[0.22em] -translate-x-1/2 -rotate-12 text-chart-2"
+              />
+            </span>
+            ty
+          </span>
+          <span className="sr-only">City</span>{" "}
+          {/* The gap is sized off the title so it clears the y's descender at every width. */}
+          <span className="mt-[0.22em] block">
+            <span className="block w-fit origin-left -rotate-2 pb-[0.45em] text-[clamp(1.75rem,0.25em,3.5rem)] font-extrabold tracking-[-0.02em]">
+              <span className="relative block">
+                Development Center
+                <PillarSquiggle />
+              </span>
+            </span>
+          </span>
         </h1>
 
         <div className="mt-8 border-t border-primary-foreground/30 pt-8 lg:mt-0 lg:max-w-md lg:shrink-0 lg:pt-6 xl:max-w-lg">
