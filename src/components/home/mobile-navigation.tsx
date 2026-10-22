@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Call02Icon, FavouriteIcon, Menu01Icon } from "@hugeicons/core-free-icons";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -12,7 +14,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { liveSite, navigationLinks } from "@/lib/site";
+import { navigationLinks } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 /* One pillar-colored heart per link, matching the footer. */
@@ -24,13 +26,10 @@ const linkHearts = [
   "text-chart-5 -rotate-12",
 ];
 
+/* The header's logo sticker, with the same two corner hearts. */
 function LogoSticker() {
   return (
-    <span className="relative block w-fit -rotate-3 bg-white p-2 shadow-[0_12px_28px_-10px_black]">
-      <span
-        aria-hidden="true"
-        className="absolute -top-3 left-1/2 h-6 w-16 -translate-x-1/2 rotate-2 bg-primary/70 shadow-sm"
-      />
+    <span className="relative block w-fit rotate-3 bg-white p-2 shadow-[0_12px_28px_-10px_black]">
       <Image
         src="/images/hotc-emblem.png"
         alt="Heart of the City Development Center"
@@ -38,13 +37,27 @@ function LogoSticker() {
         height={897}
         className="h-16 w-auto"
       />
+      <HugeiconsIcon
+        icon={FavouriteIcon}
+        fill="currentColor"
+        aria-hidden="true"
+        className="absolute -top-3 -right-3.5 size-8 rotate-12 text-chart-2 [&_path]:stroke-white [&_path]:stroke-[3] [&_path]:[paint-order:stroke]"
+      />
+      <HugeiconsIcon
+        icon={FavouriteIcon}
+        fill="currentColor"
+        aria-hidden="true"
+        className="absolute -bottom-2.5 -left-3 size-7 -rotate-12 text-chart-1 [&_path]:stroke-white [&_path]:stroke-[3] [&_path]:[paint-order:stroke]"
+      />
     </span>
   );
 }
 
 export function MobileNavigation() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <Sheet>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger
         render={
           <Button
@@ -69,10 +82,11 @@ export function MobileNavigation() {
           <ul className="flex flex-col">
             {navigationLinks.map((link, index) => (
               <li key={link.label} className="border-b">
-                <a
+                <Link
                   href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
+                  target={link.href.startsWith("/") ? undefined : "_blank"}
+                  rel={link.href.startsWith("/") ? undefined : "noreferrer"}
+                  onClick={() => setIsOpen(false)}
                   className="group flex min-h-16 items-center gap-4 text-3xl font-bold tracking-tight"
                 >
                   <HugeiconsIcon
@@ -85,16 +99,15 @@ export function MobileNavigation() {
                     )}
                   />
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
         <SheetFooter className="gap-3">
-          <a
-            href={`${liveSite}/take-action`}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            href="/take-action"
+            onClick={() => setIsOpen(false)}
             className={cn(
               buttonVariants({ size: "lg" }),
               "home-button group w-full -rotate-1 bg-white text-primary-foreground shadow-[0_10px_24px_-8px_black] transition-transform duration-200 ease-out hover:rotate-0 hover:bg-white focus-visible:rotate-0",
@@ -107,7 +120,7 @@ export function MobileNavigation() {
               className="size-5 -rotate-12 text-chart-2 transition-transform duration-200 ease-out group-hover:scale-125 group-hover:rotate-0 group-focus-visible:scale-125"
             />
             Take action
-          </a>
+          </Link>
           <a
             href="tel:+19897787899"
             className={cn(

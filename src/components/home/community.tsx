@@ -1,8 +1,8 @@
+import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
+import { ArrowRight01Icon } from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
 import { EventFilm } from "@/components/home/event-film";
-import { liveSite } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const squarespaceVideo = (id: string, file: string) =>
@@ -66,15 +66,13 @@ export function Community() {
               <p className="text-2xl leading-snug font-extrabold tracking-[-0.01em] text-balance lg:text-3xl">
                 Please join us at the next one.
               </p>
-              <a
-                href={`${liveSite}/events`}
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                href="/events"
                 className={cn(buttonVariants({ size: "lg" }), "home-button mt-6")}
               >
                 See upcoming events
-                <HugeiconsIcon icon={ArrowUpRight01Icon} aria-hidden="true" />
-              </a>
+                <HugeiconsIcon icon={ArrowRight01Icon} aria-hidden="true" />
+              </Link>
             </div>
           </div>
         </div>

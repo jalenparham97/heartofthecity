@@ -1,7 +1,7 @@
+import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Call02Icon } from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
-import { liveSite } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const pillars = [
@@ -27,11 +27,7 @@ const pillars = [
 
 export function Program() {
   return (
-    <section
-      id="program"
-      aria-labelledby="program-title"
-      className="scroll-mt-6 bg-primary text-primary-foreground"
-    >
+    <section aria-labelledby="program-title" className="bg-primary text-primary-foreground">
       <div className="site-container py-16 lg:py-24">
         <div className="grid gap-6 lg:grid-cols-12 lg:items-baseline-last lg:gap-x-8">
           <h2 id="program-title" className="section-title lg:col-span-8">
@@ -71,14 +67,9 @@ export function Program() {
             </p>
           </div>
           <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
-            <a
-              href={`${liveSite}/contact-us`}
-              target="_blank"
-              rel="noreferrer"
-              className={cn(buttonVariants({ size: "lg" }), "home-button")}
-            >
+            <Link href="/contact" className={cn(buttonVariants({ size: "lg" }), "home-button")}>
               Talk with our team
-            </a>
+            </Link>
             <a
               href="tel:+19897787899"
               className={cn("dark", buttonVariants({ size: "lg" }), "home-button")}

@@ -1,8 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
+import { ArrowRight01Icon } from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
-import { liveSite } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const recognitions = [
@@ -70,15 +70,13 @@ export function Founder() {
                 for people who can&apos;t yet advocate for themselves.
               </p>
             </div>
-            <a
-              href={`${liveSite}/about`}
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              href="/about#cherie-long"
               className={cn(buttonVariants({ size: "lg" }), "home-button mt-8")}
             >
               Read Cherie&apos;s story
-              <HugeiconsIcon icon={ArrowUpRight01Icon} aria-hidden="true" />
-            </a>
+              <HugeiconsIcon icon={ArrowRight01Icon} aria-hidden="true" />
+            </Link>
           </div>
         </div>
 
