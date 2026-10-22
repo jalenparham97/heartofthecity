@@ -33,14 +33,14 @@ const ways = [
     tape: "rotate-2",
   },
   {
-    title: "Shop the store",
+    title: "Make a donation",
     description:
-      "Mugs, keychains, and shirts with our logo. All proceeds go toward the growth of our program.",
-    action: { label: "Visit the store", href: "/store" },
+      "Give online or with Cash App. Donations help us grow our facility and welcome more individuals into the program.",
+    action: { label: "Donate today", href: "/take-action#donate" },
     photo: {
-      src: "/images/community.jpg",
-      alt: "A Heart of the City mug, keychains, and koozie from the center's store",
-      position: "object-center",
+      src: "/images/together.jpg",
+      alt: "Two Heart of the City team members in matching shirts beside the center's banner",
+      position: "object-top",
     },
     tilt: "-rotate-1",
     tape: "-rotate-2",

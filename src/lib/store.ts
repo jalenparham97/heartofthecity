@@ -2,7 +2,8 @@ import { liveSite } from "@/lib/site";
 
 const squarespaceImages = "https://images.squarespace-cdn.com/content/v1/632de321be958318e9f257a4";
 
-/* Merch from the live store. Buttons go to each product's page there until checkout moves here. */
+/* Merch from the live store. The /store page is hidden for now; to bring it back, add src/app/store/page.tsx
+   rendering StoreHero, MerchGrid and DaySupport. Buttons go to each product's page on the live store. */
 export const products = [
   {
     name: "Puzzle Heart Shirt",

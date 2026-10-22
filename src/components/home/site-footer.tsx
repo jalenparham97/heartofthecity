@@ -15,8 +15,7 @@ const footerLinks = [
   { label: "Take action", href: "/take-action", heart: "text-chart-2 rotate-6" },
   { label: "Events", href: "/events", heart: "text-chart-3 -rotate-6" },
   { label: "Sponsor", href: "/sponsor", heart: "text-chart-4 rotate-12" },
-  { label: "Store", href: "/store", heart: "text-chart-5 -rotate-12" },
-  { label: "Notary", href: "/notary", heart: "text-chart-1 rotate-6" },
+  { label: "Notary", href: "/notary", heart: "text-chart-5 rotate-6" },
   { label: "Contact", href: "/contact", heart: "text-chart-2 -rotate-6" },
 ];
 
