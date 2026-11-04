@@ -43,10 +43,12 @@ export function Newsletter() {
               id="newsletter-title"
               className="text-3xl leading-tight font-extrabold tracking-[-0.02em]"
             >
-              Be the first to know.
+              Stay connected. Stay inspired.
             </h2>
-            <p className="mt-2 max-w-sm text-lg leading-snug text-balance text-muted-foreground">
-              Initiatives and events from the center, straight to your inbox.
+            <p className="mt-2 max-w-md text-lg leading-snug text-muted-foreground">
+              Be the first to hear about exciting programs, upcoming events, community initiatives,
+              and opportunities to get involved at Heart of the City Development Center, delivered
+              straight to your inbox.
             </p>
           </div>
         </div>

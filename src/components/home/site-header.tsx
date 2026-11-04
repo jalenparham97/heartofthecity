@@ -12,12 +12,12 @@ const logoHearts = [
   {
     color: "text-chart-2",
     place:
-      "-top-2.5 -right-3 size-6 rotate-12 group-hover:-translate-y-1 group-hover:rotate-0 sm:size-7",
+      "-top-1.5 -right-2 size-6 rotate-12 group-hover:-translate-y-1 group-hover:rotate-0 sm:size-7",
   },
   {
     color: "text-chart-1",
     place:
-      "-bottom-2 -left-2.5 size-5 -rotate-12 group-hover:translate-y-0.5 group-hover:rotate-0 sm:size-6",
+      "-bottom-1 -left-1.5 size-5 -rotate-12 group-hover:translate-y-0.5 group-hover:rotate-0 sm:size-6",
   },
 ];
 
@@ -28,14 +28,14 @@ export function SiteHeader() {
         <Link
           href="/"
           aria-label="Heart of the City home"
-          className="group relative shrink-0 rotate-3 bg-white p-1.5 shadow-[0_10px_24px_-8px_black] transition-transform duration-200 ease-out hover:rotate-0 focus-visible:rotate-0"
+          className="group relative flex size-16 shrink-0 items-center justify-center rounded-full bg-white shadow-[0_10px_24px_-8px_black] transition-transform duration-200 ease-out hover:-rotate-6 focus-visible:-rotate-6 sm:size-18 lg:size-20"
         >
           <Image
-            src="/images/hotc-emblem.png"
+            src="/images/hotc-emblem-transparent.png"
             alt="Heart of the City Development Center"
             width={986}
             height={897}
-            className="h-12 w-auto sm:h-14 lg:h-16"
+            className="w-[86%]"
             preload
           />
           {logoHearts.map((heart) => (
@@ -53,14 +53,14 @@ export function SiteHeader() {
           ))}
         </Link>
         <nav aria-label="Main navigation" className="hidden lg:block">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center">
             {navigationLinks.map((link) => (
               <li key={link.label}>
                 <Link
                   href={link.href}
                   target={link.href.startsWith("/") ? undefined : "_blank"}
                   rel={link.href.startsWith("/") ? undefined : "noreferrer"}
-                  className="inline-flex min-h-11 items-center px-4 text-lg font-medium underline-offset-[6px] hover:underline"
+                  className="inline-flex min-h-11 items-center px-2.5 text-lg font-medium whitespace-nowrap underline-offset-[6px] hover:underline xl:px-4"
                 >
                   {link.label}
                 </Link>

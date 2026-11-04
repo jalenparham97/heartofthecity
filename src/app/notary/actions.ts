@@ -1,5 +1,7 @@
 "use server";
 
+import { contact } from "@/lib/site";
+
 type NotaryField = "firstName" | "lastName" | "email" | "phone" | "items" | "date";
 
 export type NotaryState = {
@@ -45,8 +47,7 @@ export async function requestNotary(
 
   return {
     status: "unavailable",
-    message:
-      "Online requests aren't connected yet. Call (989) 778-7899 or email heartofthecity989@gmail.com for a quote and appointment.",
+    message: `Online requests aren't connected yet. Call ${contact.phone} or email ${contact.email} for a quote and appointment.`,
     errors: {},
     values,
   };

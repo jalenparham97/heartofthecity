@@ -3,11 +3,15 @@ import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   ArrowUpRight01Icon,
+  Call02Icon,
   Facebook01Icon,
   FavouriteIcon,
   InstagramIcon,
+  Location01Icon,
+  Mail01Icon,
 } from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
+import { contact } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const footerLinks = [
@@ -19,8 +23,53 @@ const footerLinks = [
   { label: "Contact", href: "/contact", heart: "text-chart-2 -rotate-6" },
 ];
 
-const directionsUrl =
-  "https://www.google.com/maps/search/?api=1&query=804+S.+Hamilton+Street+Saginaw+MI+48602";
+const contactLines = [
+  { label: contact.phone, href: contact.phoneHref, icon: Call02Icon, color: "text-chart-1" },
+  {
+    label: contact.email,
+    href: `mailto:${contact.email}`,
+    icon: Mail01Icon,
+    color: "text-chart-3",
+  },
+];
+
+function ContactDetails() {
+  return (
+    <div className="flex flex-col gap-3 text-lg leading-snug">
+      <address className="flex gap-3 not-italic">
+        <HugeiconsIcon
+          icon={Location01Icon}
+          aria-hidden="true"
+          className="mt-0.5 size-6 shrink-0 text-chart-2"
+        />
+        <span>
+          {contact.place}
+          <br />
+          {contact.street}
+          <br />
+          {contact.city}
+        </span>
+      </address>
+      <ul className="flex flex-col gap-1">
+        {contactLines.map((line) => (
+          <li key={line.label}>
+            <a
+              href={line.href}
+              className="inline-flex min-h-11 items-center gap-3 underline-offset-[6px] [overflow-wrap:anywhere] hover:underline"
+            >
+              <HugeiconsIcon
+                icon={line.icon}
+                aria-hidden="true"
+                className={cn("size-6 shrink-0", line.color)}
+              />
+              {line.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 function LogoSnapshot() {
   return (
@@ -78,7 +127,7 @@ function SocialLinks() {
   return (
     <div className="flex gap-3">
       <a
-        href="https://www.facebook.com/heartofthecitydevelopmentcenter"
+        href={contact.facebookUrl}
         target="_blank"
         rel="noreferrer"
         aria-label="Heart of the City on Facebook"
@@ -87,7 +136,7 @@ function SocialLinks() {
         <HugeiconsIcon icon={Facebook01Icon} className="size-5" aria-hidden="true" />
       </a>
       <a
-        href="https://www.instagram.com/heartofthecity989/"
+        href={contact.instagramUrl}
         target="_blank"
         rel="noreferrer"
         aria-label="Heart of the City on Instagram"
@@ -109,25 +158,15 @@ export function SiteFooter() {
           </div>
 
           <h2 className="section-title text-balance lg:col-span-8 xl:col-span-7 xl:col-start-6">
-            A place to learn, grow &amp; engage in social activities.
+            A place to learn, grow, engage &amp; heal.
           </h2>
 
           <div className="grid gap-12 sm:grid-cols-2 sm:gap-x-8 md:col-span-2 lg:col-span-8 xl:col-span-7 xl:col-start-6">
             <div>
-              <address className="text-xl leading-relaxed not-italic">
-                804 S. Hamilton Street
-                <br />
-                Saginaw, MI 48602
-              </address>
-              <a
-                href="tel:+19897787899"
-                className="mt-1 inline-flex min-h-11 items-center text-xl font-bold underline-offset-[6px] hover:underline"
-              >
-                (989) 778-7899
-              </a>
+              <ContactDetails />
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <a
-                  href={directionsUrl}
+                  href={contact.directionsUrl}
                   target="_blank"
                   rel="noreferrer"
                   className={cn(buttonVariants({ size: "lg" }), "home-button")}

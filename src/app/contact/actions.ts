@@ -1,5 +1,7 @@
 "use server";
 
+import { contact } from "@/lib/site";
+
 type ContactField = "topic" | "firstName" | "lastName" | "email" | "message";
 
 export type ContactState = {
@@ -38,8 +40,7 @@ export async function sendContactMessage(
 
   return {
     status: "unavailable",
-    message:
-      "Online messages aren't connected yet. Email heartofthecity989@gmail.com or call (989) 778-7899 and we'll help you there.",
+    message: `Online messages aren't connected yet. Email ${contact.email} or call ${contact.phone} and we'll help you there.`,
     errors: {},
     values,
   };

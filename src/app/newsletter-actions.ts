@@ -1,5 +1,7 @@
 "use server";
 
+import { contact } from "@/lib/site";
+
 export type NewsletterState = {
   status: "idle" | "invalid" | "unavailable";
   message: string;
@@ -20,8 +22,7 @@ export async function subscribeToNewsletter(
 
   return {
     status: "unavailable",
-    message:
-      "Online sign-up isn't connected yet. Call us at (989) 778-7899 and we'll add you to the list.",
+    message: `Online sign-up isn't connected yet. Call us at ${contact.phone} and we'll add you to the list.`,
     email,
   };
 }

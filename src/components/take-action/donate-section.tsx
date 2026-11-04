@@ -103,8 +103,8 @@ export function DonateSection() {
           />
           <div className="relative aspect-4/5 overflow-hidden bg-secondary">
             <Image
-              src="/images/celebration.jpg"
-              alt="Two supporters wearing Heart of the City shirts"
+              src="https://images.squarespace-cdn.com/content/v1/632de321be958318e9f257a4/b5003cce-9e79-4d66-8b0a-52eb047b723b/IMG_20220917_202524035_HDR.jpg"
+              alt="Four Heart of the City team members in matching shirts, smiling together"
               fill
               sizes="(min-width: 1024px) 24rem, 90vw"
               className="object-cover object-top"

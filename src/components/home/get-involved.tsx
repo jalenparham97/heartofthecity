@@ -9,7 +9,7 @@ const ways = [
   {
     title: "Volunteer your time",
     description:
-      "Bring your talents to our community and spend time with our enrollees. Every hour helps someone learn, grow, and engage.",
+      "Bring your talents to our community and spend time with our enrollees. Every hour helps someone learn, grow, engage, and heal.",
     action: { label: "See volunteer opportunities", href: "/take-action#volunteer" },
     photo: {
       src: "/images/connection.jpg",
@@ -22,20 +22,20 @@ const ways = [
   {
     title: "Become a sponsor",
     description:
-      "Help us build more opportunities for individuals and families across Saginaw County, from day programming to community events.",
+      "Help us create more opportunities for individuals and families of all ages and abilities through inclusive programs, educational experiences, and meaningful community events.",
     action: { label: "Learn about sponsorship", href: "/sponsor" },
     photo: {
-      src: "/images/celebration.jpg",
-      alt: "Two supporters wearing Heart of the City shirts",
+      src: "https://images.squarespace-cdn.com/content/v1/632de321be958318e9f257a4/9d403ef2-f829-42d9-8d8f-ed7ae2f888bd/Screenshot_20220929-142344_4.png",
+      alt: "Cherie Long standing behind a young woman, both in Heart of the City shirts",
       position: "object-top",
     },
     tilt: "rotate-1 sm:rotate-[1.5deg]",
     tape: "rotate-2",
   },
   {
-    title: "Make a donation",
+    title: "Here's how to make a donation",
     description:
-      "Give online or with Cash App. Donations help us grow our facility and welcome more individuals into the program.",
+      "Support our mission by donating online or via Cash App. Your generosity helps us expand our programs, enhance our facility, and create more inclusive opportunities for individuals and families of all ages and abilities to learn, grow, engage, and heal.",
     action: { label: "Donate today", href: "/take-action#donate" },
     photo: {
       src: "/images/together.jpg",
@@ -62,7 +62,7 @@ export function GetInvolved() {
           </h2>
           <p className="max-w-md text-lg leading-snug text-primary-foreground/85 lg:col-span-4 xl:text-xl xl:leading-snug">
             A little of your time or support creates more chances for our enrollees to learn, grow,
-            and engage.
+            engage, and heal.
           </p>
         </div>
 
@@ -114,8 +114,9 @@ export function GetInvolved() {
         </ul>
 
         <p className="mt-16 max-w-2xl text-lg leading-relaxed text-primary-foreground/85">
-          With sincere gratitude to the Saginaw Community Foundation for their contribution to our
-          mission.
+          We extend our heartfelt gratitude to the Saginaw Community Foundation for their generous
+          support and commitment to our mission of empowering individuals, strengthening families,
+          and creating inclusive opportunities for all abilities.
         </p>
       </div>
     </section>

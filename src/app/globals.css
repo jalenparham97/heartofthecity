@@ -182,14 +182,20 @@
     line-height: 1;
   }
 
-  /* Learn. Grow. Engage. read as one line on large screens, each word filling its column. */
+  /* Learn. Grow. Engage. Heal. read as one line on extra-large screens, each word filling its column. */
   .program-word {
-    @apply text-[4rem] sm:text-[5rem];
+    @apply text-[4rem];
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 640px) {
     .program-word {
-      font-size: min(calc((100vw - 10rem) / 13.5), 6.25rem);
+      font-size: min(calc((100vw - 6rem) / 10), 5rem);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .program-word {
+      font-size: min(calc((100vw - 12rem) / 19), 5rem);
     }
   }
 
@@ -225,10 +231,21 @@
   }
 }
 
-/* Near-black from the logo navy, so photos keep their own colors under a quiet shade. */
+/* Near-black from the logo navy blended with the brand purple, so the bands read plum, not blue. */
 .ink-band {
-  --ink: color-mix(in oklch, var(--foreground) 35%, black);
+  --ink: color-mix(in oklch, color-mix(in oklch, var(--primary) 60%, var(--foreground)) 45%, black);
   background: var(--ink);
+}
+
+/* Washes a photo toward the brand purple and red without hiding its own colors. */
+.brand-tint {
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklch, var(--primary) 55%, transparent) 0%,
+    color-mix(in oklch, var(--chart-4) 35%, transparent) 55%,
+    color-mix(in oklch, var(--chart-2) 25%, transparent) 100%
+  );
+  mix-blend-mode: color;
 }
 
 /* Keeps the header readable at the top and fades the photo into ink where the type sits. */

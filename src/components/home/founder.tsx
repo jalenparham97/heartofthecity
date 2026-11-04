@@ -54,20 +54,24 @@ export function Founder() {
         <div className="grid lg:grid-cols-12 lg:gap-x-8">
           <div className="max-w-2xl py-14 lg:col-span-6 lg:col-start-7 lg:max-w-none lg:pt-28 lg:pb-20">
             <h2 id="founder-title" className="section-title">
-              Led by a mother who knows this road.
+              Why we exist: I&apos;Lexsis and her mom, Cherie.
             </h2>
             <p className="mt-5 text-xl font-bold">
-              Cherie Long<span className="font-normal text-muted-foreground">, President</span>
+              Cherie Long
+              <span className="font-normal text-muted-foreground">
+                , President, and her daughter I&apos;Lexsis
+              </span>
             </p>
             <div className="mt-8 space-y-5 text-lg leading-relaxed xl:text-xl xl:leading-relaxed">
               <p>
-                Cherie is raising a daughter who was born developmentally delayed. This center
-                reflects her deep-rooted passion for families like hers.
+                I&apos;Lexsis was born developmentally delayed. Raising her showed Cherie how few
+                places there are where people of every ability, and the families who love them, can
+                keep learning, growing, and belonging.
               </p>
               <p className="text-muted-foreground">
-                She brings more than 23 years in healthcare, serves on the executive board of
-                Saginaw County Community Mental Health, and is known across the city for advocating
-                for people who can&apos;t yet advocate for themselves.
+                Heart of the City grew out of that journey. Cherie brings more than 23 years in
+                healthcare and is known across the city for advocating for people who can&apos;t yet
+                advocate for themselves.
               </p>
             </div>
             <Link

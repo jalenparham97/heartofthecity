@@ -1,6 +1,7 @@
 import { HugeiconsIcon } from "@hugeicons/react";
 import { FavouriteIcon } from "@hugeicons/core-free-icons";
 import { NotaryForm } from "@/components/notary/notary-form";
+import { contact } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const notes = [
@@ -20,10 +21,10 @@ const notes = [
       <>
         Call{" "}
         <a
-          href="tel:+19897787899"
+          href={contact.phoneHref}
           className="font-bold whitespace-nowrap underline decoration-2 underline-offset-4"
         >
-          (989) 778-7899
+          {contact.phone}
         </a>
         .
       </>

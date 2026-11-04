@@ -54,7 +54,7 @@ export function EventsHero({ nextEvent }: { nextEvent?: SiteEvent }) {
             <span className="block">the calendar.</span>
           </h1>
           <p className="mt-6 max-w-xl text-xl leading-snug text-foreground/85 xl:text-2xl xl:leading-snug">
-            Workshops, support groups and gatherings at the center on S. Hamilton Street in Saginaw.
+            Workshops, support groups and gatherings with Heart of the City in Saginaw.
           </p>
         </div>
         <div className="mx-auto w-full max-w-sm rotate-2 shadow-[0_24px_48px_-16px_black] lg:col-span-4 lg:col-start-9 lg:max-w-none">
