@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Heart of the City Development Center | Saginaw, MI",
   description:
-    "A place to learn, grow, and belong. Heart of the City Development Center supports adults with intellectual and developmental disabilities in Saginaw County, Michigan.",
+    "A place to learn, grow, engage, and heal. Heart of the City Development Center empowers children and adults of all abilities, and their families, in Saginaw, Michigan.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

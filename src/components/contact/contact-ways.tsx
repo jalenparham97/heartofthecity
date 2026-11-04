@@ -9,32 +9,30 @@ import {
   MailboxIcon,
 } from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
+import { contact } from "@/lib/site";
 import { cn } from "@/lib/utils";
-
-const directionsUrl =
-  "https://www.google.com/maps/search/?api=1&query=804+S.+Hamilton+Street+Saginaw+MI+48602";
 
 const ways = [
   {
     title: "Call",
     icon: Call02Icon,
     color: "text-chart-1",
-    lines: ["(989) 778-7899"],
-    href: "tel:+19897787899",
+    lines: [contact.phone],
+    href: contact.phoneHref,
   },
   {
     title: "Email",
     icon: Mail01Icon,
     color: "text-chart-3",
-    lines: ["heartofthecity989@gmail.com"],
-    href: "mailto:heartofthecity989@gmail.com",
+    lines: [contact.email],
+    href: `mailto:${contact.email}`,
   },
   {
     title: "Visit",
     icon: LocationFavourite01Icon,
     color: "text-chart-2",
-    lines: ["804 S. Hamilton Street", "Saginaw, MI 48602"],
-    href: directionsUrl,
+    lines: [contact.place, contact.street, contact.city],
+    href: contact.directionsUrl,
     isExternal: true,
   },
   {
@@ -87,7 +85,7 @@ export function ContactWays() {
         </h2>
         <div className="flex shrink-0 gap-2">
           <a
-            href="https://www.facebook.com/heartofthecitydevelopmentcenter"
+            href={contact.facebookUrl}
             target="_blank"
             rel="noreferrer"
             aria-label="Heart of the City on Facebook"
@@ -96,7 +94,7 @@ export function ContactWays() {
             <HugeiconsIcon icon={Facebook01Icon} className="size-5" aria-hidden="true" />
           </a>
           <a
-            href="https://www.instagram.com/heartofthecity989/"
+            href={contact.instagramUrl}
             target="_blank"
             rel="noreferrer"
             aria-label="Heart of the City on Instagram"

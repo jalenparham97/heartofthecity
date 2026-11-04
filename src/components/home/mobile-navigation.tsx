@@ -14,7 +14,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { navigationLinks } from "@/lib/site";
+import { contact, navigationLinks } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 /* One pillar-colored heart per link, matching the footer. */
@@ -24,30 +24,31 @@ const linkHearts = [
   "text-chart-3 -rotate-6",
   "text-chart-4 rotate-12",
   "text-chart-5 -rotate-12",
+  "text-chart-2 rotate-6",
 ];
 
 /* The header's logo sticker, with the same two corner hearts. */
 function LogoSticker() {
   return (
-    <span className="relative block w-fit rotate-3 bg-white p-2 shadow-[0_12px_28px_-10px_black]">
+    <span className="relative flex size-24 items-center justify-center rounded-full bg-white shadow-[0_12px_28px_-10px_black]">
       <Image
-        src="/images/hotc-emblem.png"
+        src="/images/hotc-emblem-transparent.png"
         alt="Heart of the City Development Center"
         width={986}
         height={897}
-        className="h-16 w-auto"
+        className="w-[86%]"
       />
       <HugeiconsIcon
         icon={FavouriteIcon}
         fill="currentColor"
         aria-hidden="true"
-        className="absolute -top-3 -right-3.5 size-8 rotate-12 text-chart-2 [&_path]:stroke-white [&_path]:stroke-[3] [&_path]:[paint-order:stroke]"
+        className="absolute -top-1.5 -right-2 size-8 rotate-12 text-chart-2 [&_path]:stroke-white [&_path]:stroke-[3] [&_path]:[paint-order:stroke]"
       />
       <HugeiconsIcon
         icon={FavouriteIcon}
         fill="currentColor"
         aria-hidden="true"
-        className="absolute -bottom-2.5 -left-3 size-7 -rotate-12 text-chart-1 [&_path]:stroke-white [&_path]:stroke-[3] [&_path]:[paint-order:stroke]"
+        className="absolute -bottom-1 -left-1.5 size-7 -rotate-12 text-chart-1 [&_path]:stroke-white [&_path]:stroke-[3] [&_path]:[paint-order:stroke]"
       />
     </span>
   );
@@ -122,14 +123,14 @@ export function MobileNavigation() {
             Take action
           </Link>
           <a
-            href="tel:+19897787899"
+            href={contact.phoneHref}
             className={cn(
               buttonVariants({ variant: "secondary", size: "lg" }),
               "home-button w-full",
             )}
           >
             <HugeiconsIcon icon={Call02Icon} aria-hidden="true" />
-            (989) 778-7899
+            {contact.phone}
           </a>
         </SheetFooter>
       </SheetContent>

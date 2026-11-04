@@ -19,8 +19,8 @@ const initialState: ContactState = {
 
 /* Each topic wears one of the logo's pillar colors. */
 const topics = [
-  { label: "Day program", heart: "text-chart-1" },
-  { label: "Your Recipe for Healing", heart: "text-chart-2" },
+  { label: "Adult programming", heart: "text-chart-2" },
+  { label: "Youth and families", heart: "text-chart-1" },
   { label: "Volunteering", heart: "text-chart-3" },
   { label: "Sponsoring", heart: "text-chart-4" },
   { label: "Something else", heart: "text-chart-5" },

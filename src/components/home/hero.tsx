@@ -52,6 +52,7 @@ export function Hero() {
           sizes="100vw"
           className="object-cover object-[72%_center] lg:object-center"
         />
+        <div className="brand-tint absolute inset-0" />
         <div className="hero-scrim absolute inset-0" />
       </div>
 
@@ -86,9 +87,10 @@ export function Hero() {
         </h1>
 
         <div className="mt-8 border-t border-primary-foreground/30 pt-8 lg:mt-0 lg:max-w-md lg:shrink-0 lg:pt-6 xl:max-w-lg">
-          <p className="hero-copy text-xl leading-snug font-medium xl:text-2xl xl:leading-snug">
-            A day program in Saginaw where adults with intellectual and developmental disabilities
-            keep learning, growing, and belonging.
+          <p className="hero-copy text-xl leading-snug font-bold xl:text-[1.375rem] xl:leading-snug">
+            At Heart of the City Development Center, we believe everyone deserves a place to belong.
+            Through inclusive education, advocacy, life-skills development, and family-centered
+            support, we empower children and adults of all abilities to reach their full potential.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href="#services" className={cn(buttonVariants({ size: "lg" }), "home-button")}>

@@ -8,7 +8,7 @@ import { AboutVisit } from "@/components/about/about-visit";
 export const metadata: Metadata = {
   title: "About | Heart of the City Development Center",
   description:
-    "Our mission, what sets our day program apart, and the story of our president, Cherie Long.",
+    "Our mission, what sets our adult programming apart, and the story of our president, Cherie Long.",
 };
 
 export default function AboutPage() {

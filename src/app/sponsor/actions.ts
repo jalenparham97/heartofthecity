@@ -1,5 +1,7 @@
 "use server";
 
+import { contact } from "@/lib/site";
+
 type SponsorField =
   | "organization"
   | "website"
@@ -75,8 +77,7 @@ export async function sendSponsorship(
 
   return {
     status: "unavailable",
-    message:
-      "Online sponsorship isn't connected yet. Call (989) 778-7899 or email heartofthecity989@gmail.com and we'll set up your sponsorship.",
+    message: `Online sponsorship isn't connected yet. Call ${contact.phone} or email ${contact.email} and we'll set up your sponsorship.`,
     errors: {},
     values,
   };

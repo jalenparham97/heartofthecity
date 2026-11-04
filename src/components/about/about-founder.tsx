@@ -28,9 +28,7 @@ const credentials = [
     heart: "text-chart-3",
     isWide: true,
     items: [
-      "Executive board member, Saginaw County Community Mental Health",
       "Member of the Saginaw County Chamber of Commerce",
-      "Member of Kiwanis International",
       "Volunteer with the CAN Council, Child & Family Services, and the Sexual Assault Center",
     ],
   },

@@ -35,8 +35,8 @@ export default function ContactPage() {
             Contact us
           </h1>
           <p className="mt-6 max-w-xl text-xl leading-snug text-primary-foreground/85 xl:text-2xl xl:leading-snug">
-            Questions about the day program, Your Recipe for Healing, volunteering, or sponsoring?
-            Send a note or give us a call.
+            Questions about adult programming, youth and family programs, volunteering, or
+            sponsoring? Send a note or give us a call.
           </p>
         </div>
       </section>

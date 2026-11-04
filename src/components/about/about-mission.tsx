@@ -17,10 +17,10 @@ export function AboutMission() {
           Our mission
         </h2>
         <div className="lg:col-span-8">
-          <p className="max-w-3xl text-2xl leading-snug font-medium text-balance xl:text-[1.75rem] xl:leading-snug">
-            We provide a space for individuals with intellectual and developmental disabilities to
-            keep exploring and developing every day. We help each person live life to the fullest,
-            in an educational and socially engaging atmosphere that creates a better tomorrow.
+          <p className="max-w-3xl text-2xl leading-snug font-bold text-balance xl:text-[1.75rem] xl:leading-snug">
+            At Heart of the City Development Center, we believe everyone deserves a place to belong.
+            Through inclusive education, advocacy, life-skills development, and family-centered
+            support, we empower children and adults of all abilities to reach their full potential.
           </p>
           <p className="mt-10 text-lg font-bold">Every day, we work toward:</p>
           <ul className="mt-4 flex flex-wrap gap-3">

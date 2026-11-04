@@ -1,5 +1,7 @@
 "use server";
 
+import { contact } from "@/lib/site";
+
 type VolunteerField = "firstName" | "lastName" | "email" | "phone" | "interest";
 
 export type VolunteerState = {
@@ -40,8 +42,7 @@ export async function signUpToVolunteer(
 
   return {
     status: "unavailable",
-    message:
-      "Online sign-up isn't connected yet. Call (989)\u00a0778-7899 or email heartofthecity989@gmail.com and we'll get you started.",
+    message: `Online sign-up isn't connected yet. Call ${contact.phone} or email ${contact.email} and we'll get you started.`,
     errors: {},
     values,
   };

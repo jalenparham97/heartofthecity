@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Clock01Icon, Location01Icon } from "@hugeicons/core-free-icons";
 import { CalendarPage } from "@/components/events/calendar-page";
@@ -25,7 +24,7 @@ function EventEntry({ event, index }: { event: SiteEvent; index: number }) {
         </time>
       </CalendarPage>
 
-      <div className="lg:col-span-6">
+      <div className="lg:col-span-9">
         <h3 className="text-3xl leading-tight font-extrabold tracking-[-0.02em] sm:text-4xl">
           {event.title}
         </h3>
@@ -52,31 +51,6 @@ function EventEntry({ event, index }: { event: SiteEvent; index: number }) {
         <p className="mt-5 max-w-2xl text-xl leading-relaxed">{event.summary}</p>
         <p className="mt-3 text-lg text-muted-foreground">{event.partners}</p>
       </div>
-
-      <a
-        href={event.flyer.src}
-        target="_blank"
-        rel="noreferrer"
-        className={cn(
-          "relative block w-full max-w-64 bg-white p-2.5 pb-3 shadow-[0_18px_40px_-14px_color-mix(in_oklch,var(--foreground)_55%,transparent)] transition-transform duration-300 ease-out hover:rotate-0 focus-visible:rotate-0 sm:col-start-2 lg:col-span-3 lg:col-start-10 lg:max-w-none",
-          isEven ? "rotate-2" : "-rotate-2",
-        )}
-      >
-        <span
-          aria-hidden="true"
-          className="absolute -top-3.5 left-1/2 h-7 w-20 -translate-x-1/2 -rotate-2 bg-secondary shadow-sm"
-        />
-        <span className="relative block aspect-4/5 overflow-hidden bg-secondary">
-          <Image
-            src={event.flyer.src}
-            alt={event.flyer.alt}
-            fill
-            sizes="(min-width: 1024px) 20vw, 16rem"
-            className="object-cover object-top"
-          />
-        </span>
-        <span className="sr-only">(opens the full flyer in a new tab)</span>
-      </a>
     </li>
   );
 }

@@ -1,7 +1,7 @@
 import { HugeiconsIcon } from "@hugeicons/react";
 import { FavouriteIcon } from "@hugeicons/core-free-icons";
 import { SponsorForm } from "@/components/sponsor/sponsor-form";
-import { donateOnlineUrl, sponsorshipFormUrl } from "@/lib/site";
+import { contact, donateOnlineUrl, sponsorshipFormUrl } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const linkStyle = "font-bold underline decoration-2 underline-offset-4 [overflow-wrap:anywhere]";
@@ -14,8 +14,8 @@ const notes = [
     body: (
       <>
         Email your company logo as a JPEG or PNG to{" "}
-        <a href="mailto:heartofthecity989@gmail.com" className={linkStyle}>
-          heartofthecity989@gmail.com
+        <a href={`mailto:${contact.email}`} className={linkStyle}>
+          {contact.email}
         </a>
         .
       </>

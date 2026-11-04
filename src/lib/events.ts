@@ -11,10 +11,6 @@ export const events = [
       "A free S.T.E.A.M. learning workshop for all ages, with 25 spots. Registration opened on site at 9:30 AM.",
     partners: "With the Saginaw Community Foundation and Executive Business Solutions.",
     heart: "text-chart-3",
-    flyer: {
-      src: "https://images.squarespace-cdn.com/content/v1/632de321be958318e9f257a4/1724251100764-V38T7W1LQ0H4EN5SI4N9/3D+CHARACTER+ONLINE+COURSE+%28Flyer%29_20240721_224519_0000.png",
-      alt: "Flyer for the free Intro to Computers workshop on September 21, 2024, 10 AM to noon at 804 S. Hamilton Street",
-    },
   },
   {
     title: "Parent and Caregiver Support Group",
@@ -25,10 +21,6 @@ export const events = [
       "A safe space for parents and caregivers to share their concerns and find support, guidance and resources. The in-person session included an activity for loved ones, so families could come together.",
     partners: "With the Y, Mama Bears and Disability Network.",
     heart: "text-chart-2",
-    flyer: {
-      src: "https://images.squarespace-cdn.com/content/v1/632de321be958318e9f257a4/1724251524305-J5XZGX0ZTIA5UCBE3Z4B/Screenshot_20240803-214856%7E2+%281%29.png",
-      alt: "Flyer for the Parent and Caregiver Support Group, held in person and online at 804 S. Hamilton, Saginaw",
-    },
   },
 ];
 

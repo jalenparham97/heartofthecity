@@ -4,7 +4,7 @@ import { FavouriteIcon } from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-/* The day program serves ages 16 to 55, so age 26 sits about a quarter of the way along. */
+/* Adult programming serves ages 16 to 55, so age 26 sits about a quarter of the way along. */
 const hearts = [
   { color: "text-chart-1", place: "left-[40%]" },
   { color: "text-chart-2", place: "left-[55%]" },
@@ -50,7 +50,7 @@ function AgeLine() {
             aria-hidden="true"
             className="mt-0.5 size-5 shrink-0 text-chart-2"
           />
-          Our day program keeps going, up to age 55.
+          Our adult programming keeps going, up to age 55.
         </p>
       </div>
     </div>
@@ -68,9 +68,9 @@ export function AboutDifference() {
           </h2>
           <div className="lg:col-span-5 lg:col-start-8 lg:pt-1">
             <p className="text-lg leading-relaxed text-primary-foreground/85 xl:text-xl xl:leading-relaxed">
-              We intend to offer the highest quality care and day program services in Saginaw
-              County. What sets us apart is our commitment to educational and daily life skill
-              services beyond the age of 26.
+              We intend to offer the highest quality care and adult programming in Saginaw County.
+              What sets us apart is our commitment to educational and daily life skill services
+              beyond the age of 26.
             </p>
             <Link
               href="/#services"

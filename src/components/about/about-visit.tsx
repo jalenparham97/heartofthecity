@@ -3,6 +3,7 @@ import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Call02Icon, FavouriteIcon } from "@hugeicons/core-free-icons";
 import { buttonVariants } from "@/components/ui/button";
+import { contact } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 /* A snapshot of the team, so the invitation has faces behind it. */
@@ -54,14 +55,14 @@ export function AboutVisit() {
               Contact us
             </Link>
             <a
-              href="tel:+19897787899"
+              href={contact.phoneHref}
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
                 "home-button bg-background",
               )}
             >
               <HugeiconsIcon icon={Call02Icon} aria-hidden="true" />
-              (989) 778-7899
+              {contact.phone}
             </a>
           </div>
         </div>
