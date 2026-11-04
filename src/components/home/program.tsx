@@ -54,13 +54,13 @@ export function Program() {
     <section aria-labelledby="program-title" className="bg-primary text-primary-foreground">
       <div className="site-container py-16 lg:py-24">
         <h2 id="program-title" className="section-title max-w-4xl">
-          <span className="block">Our daily mission is built</span>
-          <span className="block">on four core values.</span>
+          <span className="sm:block">Our daily mission is built</span>{" "}
+          <span className="sm:block">on four core values.</span>
         </h2>
 
         <ul className="mt-12 grid gap-y-12 sm:grid-cols-2 sm:gap-x-8 lg:mt-16 xl:grid-cols-4">
           {pillars.map((pillar) => (
-            <li key={pillar.word}>
+            <li key={pillar.word} className="@container">
               <div className="relative aspect-4/3 overflow-hidden bg-primary-foreground/10">
                 <Image
                   src={pillar.photo.src}

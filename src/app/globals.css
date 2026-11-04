@@ -182,21 +182,9 @@
     line-height: 1;
   }
 
-  /* Learn. Grow. Engage. Heal. read as one line on extra-large screens, each word filling its column. */
+  /* Sized off its own column, so "Engage.", the widest word, fills about 86% of it at any width. */
   .program-word {
-    @apply text-[4rem];
-  }
-
-  @media (min-width: 640px) {
-    .program-word {
-      font-size: min(calc((100vw - 6rem) / 10), 5rem);
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .program-word {
-      font-size: min(calc((100vw - 12rem) / 19), 5rem);
-    }
+    font-size: min(24cqi, 5rem);
   }
 
   .text-link {
